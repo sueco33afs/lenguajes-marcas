@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Videotutoriales – Lenguajes de Marcas</title>
+    <style>
+      :root {
+        --fondo: #fbfaf7;
+        --texto: #1c1c1c;
+        --texto-suave: #555;
+        --acento: #0b5c4a;
+        --acento-fondo: #eef5f2;
+        --borde: #d8d4c8;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        line-height: 1.6;
+        color: var(--texto);
+        background: var(--fondo);
+      }
+      header,
+      main,
+      footer {
+        max-width: 48rem;
+        margin-inline: auto;
+        padding: 1rem;
+      }
+      h1 {
+        font-size: clamp(1.5rem, 4vw, 2.2rem);
+        margin-bottom: 0.25rem;
+      }
+      h2 {
+        font-size: 1.25rem;
+        border-bottom: 2px solid var(--borde);
+        padding-bottom: 0.25rem;
+        margin-top: 2rem;
+      }
+      .meta,
+      .vacio {
+        color: var(--texto-suave);
+      }
+      .vacio {
+        font-style: italic;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li + li {
+        margin-top: 0.5rem;
+      }
+      li a {
+        display: block;
+        padding: 0.75rem 1rem;
+        border: 1px solid var(--borde);
+        border-radius: 0.4rem;
+        color: var(--acento);
+        text-decoration: none;
+      }
+      li a:hover {
+        background: var(--acento-fondo);
+      }
+      a:focus-visible {
+        outline: 3px solid var(--acento);
+        outline-offset: 2px;
+      }
+      footer {
+        color: var(--texto-suave);
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Videotutoriales – Lenguajes de Marcas</h1>
+      <p class="meta">
+        DAM · IES Juan Bosco · Lenguajes de Marcas y Sistemas de Gestión de la
+        Información
+      </p>
+    </header>
+
+    <main>
+      <section aria-labelledby="html">
+        <h2 id="html">HTML</h2>
+        <p class="vacio">Aún no hay tutoriales publicados.</p>
+      </section>
+
+      <section aria-labelledby="css">
+        <h2 id="css">CSS</h2>
+        <p class="vacio">Aún no hay tutoriales publicados.</p>
+      </section>
+
+      <section aria-labelledby="js">
+        <h2 id="js">JavaScript y JSON</h2>
+        <p class="vacio">Aún no hay tutoriales publicados.</p>
+      </section>
+
+      <section aria-labelledby="xml">
+        <h2 id="xml">XML</h2>
+        <p class="vacio">Aún no hay tutoriales publicados.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Publicado con GitHub Pages.</p>
+    </footer>
+  </body>
+</html>
