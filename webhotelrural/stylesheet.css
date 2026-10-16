@@ -36,6 +36,7 @@ figcaption {
 
 a {
   color: #2a5d7c;
+  font-size: large;
 }
 
 table {
@@ -68,6 +69,13 @@ input[type="text"] {
   max-width: 300px;
 }
 
+.reserva {
+  background-color: rgba(255, 213, 77, 0.705);
+  padding: 15px 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 /* Pantallas medianas y grandes */
 @media (min-width: 500px) {
   body {
@@ -77,4 +85,10 @@ input[type="text"] {
   main {
     padding: 30px;
   }
+}
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: small;
+  color: green;
 }
