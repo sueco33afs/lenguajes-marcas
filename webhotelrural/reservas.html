@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reserva - Hotel Rural DAM</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Haga su reserva</h1>
+
+      <form action="procesareserva.php" method="get">
+        <fieldset>
+          <legend>Datos Personales</legend>
+
+          <p>
+            <label for="nombre">Nombre</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              maxlength="100"
+              required
+              autofocus
+            />
+          </p>
+
+          <p>
+            <label for="apellidos">Apellidos</label>
+            <input
+              type="text"
+              id="apellidos"
+              name="apellidos"
+              maxlength="100"
+              required
+            />
+          </p>
+
+          <p>
+            <label for="dni">DNI</label>
+            <input
+              type="text"
+              id="dni"
+              name="dni"
+              maxlength="10"
+              required
+              placeholder="DNI con letra"
+            />
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Datos de su estancia</legend>
+
+          <p>
+            Habitación:
+            <input
+              type="radio"
+              id="individual"
+              name="Habitación"
+              value="Individual"
+            />
+            <label for="individual">Individual</label>
+            <input type="radio" id="doble" name="Habitación" value="Doble" />
+            <label for="doble">Doble</label>
+            <input type="radio" id="triple" name="Habitación" value="Triple" />
+            <label for="triple">Triple</label>
+          </p>
+
+          <p>
+            <label for="personas">Número de personas</label>
+            <select id="personas" name="personas">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </p>
+
+          <p>
+            <input type="checkbox" id="mascotas" name="mascotas" value="si" />
+            <label for="mascotas">Llevo mascotas</label>
+          </p>
+
+          <p>
+            <label for="fecha">Fecha de llegada</label>
+            <input type="date" id="fecha" name="fecha" />
+          </p>
+
+          <p>
+            <label for="hora">Hora de llegada</label>
+            <input type="time" id="hora" name="hora" />
+          </p>
+        </fieldset>
+
+        <p>
+          <button type="submit">Enviar</button>
+          <button type="reset">Reiniciar</button>
+        </p>
+      </form>
+
+      <p><a href="index.html">Volver</a></p>
+    </main>
+  </body>
+</html>
