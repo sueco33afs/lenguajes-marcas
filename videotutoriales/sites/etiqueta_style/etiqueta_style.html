@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estilos</title>
+    <style>
+      body {
+        background-image: url(images/background.png);
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        margin: 0 auto;
+        max-width: 900px;
+        padding: 100px 0;
+        color: darkblue;
+      }
+      header {
+        text-align: center;
+        margin-bottom: 55px;
+      }
+      li {
+        margin-bottom: 25px;
+      }
+      main {
+        padding: 0 20px;
+        margin-bottom: 100px;
+      }
+      .indice {
+        background-color: rgba(53, 134, 255, 0.5);
+        padding: 15px 20px;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      header,
+      main,
+      footer {
+        background-color: rgba(182, 211, 255, 0.397);
+        padding: 30px 20px;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.267);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Introducción a los estilos</h1>
+      <h2>Atributo style</h2>
+      <p>
+        El atributo style sirve para aplicar el formato a través del lenguaje
+        CSS.
+      </p>
+      <hr />
+    </header>
+    <main>
+      <section>
+        <article>
+          <ul>
+            <li>
+              'style' Incrusta CSS dentro del documento HTML. Va en el 'head' y
+              permite definir estilos para elementos HTML.
+            </li>
+            <li>
+              'br' (line break) Inserta un salto de línea dentro de un texto. Es
+              un elemento vacío (void element): no tiene etiqueta de cierre.
+              <p style="background-color: rgb(73, 173, 255)">
+                En un lugar de la mancha <br />
+                de cuyo nombre no quiero acordarme. <br />
+                No ha mucho tiempo que vivía un hidalgo de los de lanza en
+                <br />
+                estocada.
+              </p>
+            </li>
+            <li>
+              'pre' (preformatted text) Enfocada a contener código de
+              programación, muestra el texto tal cual está escrito: conserva
+              espacios, tabuladores y saltos de línea, y usa fuente
+              monoespaciada por defecto. Normalmente HTML colapsa los espacios
+              en blanco; 'pre' lo evita.
+              <p>Ejemplo de JavaScript:</p>
+              <pre>
+                for (const i; i < 10; i++) {
+                  alert ("Dime un número: " + i);
+                }
+              </pre>
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <p>
+        <i
+          >&copy; 2026 Etiqueta style, formato de texto y comentarios. Todos los
+          derechos reservados.</i
+        >
+      </p>
+      <p><small>by Alberto Fernández Sánchez</small></p>
+      <br />
+      <a href="/lenguajes-marcas/videotutoriales/index.html" class="indice"
+        >volver al Indice</a
+      >
+    </footer>
+  </body>
+</html>
