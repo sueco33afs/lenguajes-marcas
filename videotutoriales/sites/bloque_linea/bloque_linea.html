@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elementos de bloque y línea</title>
+    <style>
+      body {
+        background-image: url(images/background.png);
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        margin: 0 auto;
+        padding: 100px 0;
+        max-width: 900px;
+        color: darkblue;
+      }
+      header {
+        text-align: center;
+        margin-bottom: 55px;
+      }
+      li {
+        margin-bottom: 25px;
+      }
+      main {
+        padding: 0 20px;
+        margin-bottom: 100px;
+      }
+      .indice {
+        background-color: rgba(53, 134, 255, 0.5);
+        padding: 15px 20px;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      header,
+      main,
+      footer {
+        background-color: rgba(226, 236, 252, 0.397);
+        padding: 30px 20px;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.39);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Elementos de bloque y línea</h1>
+      <p>
+        Los elementos de bloque ocupan todo el ancho disponible y comienzan en
+        una nueva línea, mientras que los elementos de línea solo ocupan el
+        espacio necesario y no interrumpen el flujo del contenido.
+      </p>
+      <hr />
+    </header>
+    <main>
+      <section>
+        <article>
+          <ul>
+            <li>
+              No todas las etiquetas html se comportan igual, distinguiremos los
+              elementos de bloque y de linea.
+            </li>
+
+            <li>
+              Según la explicación de los apuntes; "1.5 Elementos de Bloque y En
+              línea ( block e inline ) Un elemento de nivel de bloque siempre
+              comienza en una nueva línea y ocupa todo el ancho disponible (se
+              extiende hacia la izquierda y hacia la derecha tanto como sea
+              posible). ( div ). Un elemento en línea no comienza en una nueva
+              línea y solo ocupa el ancho que sea necesario. ( ej. span,a,img )"
+            </li>
+            <li>
+              h1 y h2 son elementos de BLOQUE eso fuerza por defecto que estén
+              uno debajo de otro.
+            </li>
+
+            <li>Los párrafos también son elementos de bloque.</li>
+
+            <li>
+              Los div son elemntos que sirven para hacer capas, también son de
+              bloque.
+            </li>
+
+            <li>
+              <p style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.514)">
+                Si ponemos un borde al párrafo, veremos que ocupa todo el ancho.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Los elementos img (imágenes) y a (enlaces) son elementos de
+                línea.
+              </p>
+              <img
+                src="images/umbrella.png"
+                alt=""
+                style="
+                  width: 25%;
+                  height: auto;
+                  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.514);
+                "
+              />
+              <img
+                src="images/umbrella.png"
+                alt=""
+                style="
+                  width: 25%;
+                  height: auto;
+                  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.514);
+                "
+              />
+              <img
+                src="images/umbrella.png"
+                alt=""
+                style="
+                  width: 25%;
+                  height: auto;
+                  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.514);
+                "
+              />
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <p>
+        <i
+          >&copy; 2026 Elementos de bloque y línea. Todos los derechos
+          reservados.</i
+        >
+      </p>
+      <p><small>by Alberto Fernández Sánchez</small></p>
+      <br />
+      <a href="/lenguajes-marcas/videotutoriales/index.html" class="indice"
+        >volver al Indice</a
+      >
+    </footer>
+  </body>
+</html>
