@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enlaces II</title>
+    <style>
+      body {
+        background-image: url(images/background.png);
+        margin: 100px auto;
+        padding: 100px;
+        width: 800px;
+        border: 3px solid darkred;
+        border-radius: 9px;
+        box-shadow: 3px 6px 9px red;
+      }
+      header {
+        margin-bottom: 100px;
+      }
+      footer {
+        margin-top: 100px;
+      }
+      .indice {
+        background-color: rgba(255, 0, 0, 0.459);
+        padding: 15px 20px;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Enlaces II</h1>
+      <h2>Enlace a un marcador</h2>
+    </header>
+    <hr />
+    <main>
+      <section>
+        <h2><em>Creación de marcadores dentro de una etiqueta</em></h2>
+        <p>
+          Cómo hacer enlaces a un punto de una página en lugar de una página
+          completa
+        </p>
+        <p>
+          <a
+            href="https://www.defensa.gob.es/portaldecultura/san-juan-bosco"
+            target="_self"
+            >SAN JUAN BOSCO PATRON del CUERPO DE ESPECIALISTAS del Ejercito de
+            Tierra</a
+          >
+        </p>
+        <p>o en una nueva 'blank'.</p>
+        <p>
+          <a
+            href="https://www.defensa.gob.es/portaldecultura/san-juan-bosco"
+            target="_blank"
+            >SAN JUAN BOSCO PATRON del CUERPO DE ESPECIALISTAS del Ejercito de
+            Tierra</a
+          >
+        </p>
+      </section>
+      <br />
+      <section>
+        <h2><em>Enlaces a páginas del sitio</em></h2>
+        También podemos crear enlaces a páginas del mismo sitio, como el
+        siguiente que te lleva al Índice de la lista de videotutoriales.
+        <a
+          href="/lenguajes-marcas/videotutoriales/sites/Intro_HTML/Introduccion_HTML.html"
+          style="color: darkblue"
+          ><em>Click aquí</em></a
+        >
+      </section>
+      <br />
+      <section>
+        <h2><em>Enlaces a una carpeta padre</em></h2>
+        <p>
+          NO SE DEBE PONER de manera ABSOLUTA, por ejemplo
+          'C:/Escritorio/HTML/Enlaces/archivos/archivo1.html', ESTARÍA MAL,
+          aunque funcione en mi equipo, seguro que no funcionara cuando se suba
+          a un servidor
+        </p>
+        <p><a href="/lenguajes-marcas/index.html">Índice</a></p>
+      </section>
+      <br />
+      <section>
+        <h2><em>Imágenes como enlaces</em></h2>
+        <p>
+          <a href="https://www.ccn-cert.cni.es/es/" target="_blank">
+            <img
+              src="images/cybersecurity.png"
+              alt="imagen creada por IA"
+              width="500px"
+              height="300px"
+            />
+          </a>
+          <figcaption><small>Imagen creada por IA</small></figcaption>
+        </p>
+        <h2><em>Documentos como enlaces</em></h2>
+        <a href="docu/Guia_HTML.pdf">Guía HTML</a>
+      </section>
+    </main>
+    <footer>
+      <p>
+        <i>&copy; 2026 Enlaces I. Todos los derechos reservados.</i>
+      </p>
+      <p><small>by Alberto Fernández Sánchez</small></p>
+      <br />
+      <a href="/lenguajes-marcas/videotutoriales/index.html" class="indice"
+        >volver al Indice</a
+      >
+    </footer>
+  </body>
+</html>
