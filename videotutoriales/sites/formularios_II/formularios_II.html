@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios I</title>
+    <style>
+      body {
+        background-image: url(images/background.png);
+        margin: 100px auto;
+        padding: 100px;
+        width: 900px;
+        border: 3px solid darkgreen;
+        border-radius: 9px;
+        box-shadow: 3px 6px 9px green;
+        color: rgb(0, 43, 0);
+        font-size: large;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      header {
+        margin-bottom: 100px;
+        border-bottom: 3px solid darkgreen;
+      }
+      footer {
+        margin-top: 100px;
+      }
+      fieldset {
+        border: 2px solid darkgreen;
+        border-radius: 6px;
+        max-width: 45%;
+      }
+      label {
+        font-family: "Times New Roman", Times, serif;
+        font-style: italic;
+        color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="inicio">
+      <h1>Formularios I</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Formularios</h2>
+        <p>
+          Los formularios web son utilizados para hacer login, hacer pedidos,
+          introudcir datos en general.
+        </p>
+        <p>
+          Los formularios se introducen con la etiqueta
+          <strong><em>'form'</em></strong>
+        </p>
+        <p>
+          El atributo <strong><em>action</em></strong> indica que a que página
+          van dirigidos los datos. Es común que la página no esté en
+          <strong><em>html</em></strong
+          >, sino en un lenguaje d eprogramación muy común del lado del servidor
+          que se llama <strong><em>php</em></strong
+          >. Por eso es común que la página de destno tenga extensión
+          <strong><em>.php</em></strong
+          >.
+        </p>
+        <p>Para este ejemplo, la página aún no existe.</p>
+        <p>
+          El otro atributo típico de la etiqueta form es
+          <strong><em>method</em></strong
+          >. Este atributo tiene dos valores:
+        </p>
+        <ul style="list-style-type: disc">
+          <li>
+            <strong>get</strong>, los datos serán visibles en la url y están por
+            tanto limitados a la longitud de la url (es la opció si no se pone
+            nada). No es adecuada por tanto para enviar contraseñas o archivos
+            muy grandes.
+          </li>
+          <li>
+            <strong>post</strong>, los datos no serán visibles en la url y no
+            están limitados. Se pueden enviar contraseñas sin que se vean o
+            archivos grandes.
+          </li>
+        </ul>
+        <p>
+          La etiqueta <strong>fieldset</strong> no es un elemento obligatorio,
+          pero queda bien para agrupar campos, como "Datos Personales", "Datos
+          Bancarios", ... etc. La etiqueta del grupo de datos se introduce con
+          <strong><em>'legend'</em></strong>
+        </p>
+        <p>Ejemplo:</p>
+        <form action="procesa.php" method="get">
+          <fieldset>
+            <legend>Datos Personales</legend>
+            <p>
+              Nombre: <br />
+              <input type="text" name="nombre" value="nombre" />
+            </p>
+            <p>
+              Apellidos: <br />
+              <input type="text" name="apellidos" value="apellidos" />
+            </p>
+            <br />
+            <input type="submit" value="Enviar" />
+          </fieldset>
+        </form>
+        <p>
+          Si no nos gusta como queda el espaciado con <em>'br'</em> podemos
+          poner un párrafo <strong>'p'</strong> que contenga la etiqueta.
+        </p>
+        <p>
+          Al pinchar en <strong>'Enviar'</strong>, vemos que aparece un error
+          lógico debido a que no existe el archivo
+          <strong><em>procesa.php</em></strong
+          >, pero en la url si aparecen los nombres de los inputs,<em
+            >'campos'</em
+          >
+        </p>
+        <p>Todos los <em>input</em>, deben de llevar <em>'name'</em></p>
+      </section>
+      <br />
+      <section>
+        <h2>Etiqueta 'label'</h2>
+        <p>
+          Sirve para asociar un <em>'input'</em> con la etiquetita que tiene
+          delante. Esto es, 'nombre', 'apellidos', ... No es imprescindible pero
+          aporta dos cosas:
+        </p>
+        <ul style="list-style-type: georgian">
+          <li>
+            Al hacer click en la etiqueta, el foco <em>'el cursor'</em>, se
+            sitúa en el input que tiene asociado. Eso lo hace más accesible.
+          </li>
+          <li>
+            Permite aplicar estilo <strong>CSS</strong> a todas las etiquetas a
+            la vez, consiguiendo un aspecto más homogeneo.
+          </li>
+        </ul>
+        <p>Ejemplo:</p>
+        <form action="procesa.php">
+          <fieldset>
+            <legend>Datos Personales</legend>
+            <p>
+              <label for="name">Nombre:</label><br />
+              <input type="text" id="name" name="Name" />
+            </p>
+            <p>
+              <label
+                >Apellidos: <br /><input
+                  type="text"
+                  id="apellidos"
+                  name="Apellidos"
+              /></label>
+            </p>
+            <p>
+              <label for="telefono">Teléfono:</label><br /><input
+                type="number"
+                id="telefono"
+                name="Teléfono"
+              />
+            </p>
+            <p>
+              <label for="Password">Password: </label><br /><input
+                type="password"
+                id="Password"
+                name="password"
+              />
+            </p>
+          </fieldset>
+        </form>
+        <p>
+          La manera de dar <strong><em>CSS</em></strong> a todas las etiquetas
+          <em>'label'</em> es poniendo el nombre de la etiqueta entre llaves
+        </p>
+      </section>
+    </main>
+    <br /><br />
+    <a href="#inicio">inicio página</a>
+    <footer>
+      <p>
+        <i>&copy; 2026 Formularios I. Todos los derechos reservados.</i>
+      </p>
+      <p><small>by Alberto Fernández Sánchez</small></p>
+      <br />
+    </footer>
+  </body>
+</html>
