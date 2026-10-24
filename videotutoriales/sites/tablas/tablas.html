@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tablas</title>
+    <style>
+      body {
+        background-image: url(images/background.png);
+        margin: 100px auto;
+        padding: 100px;
+        width: 800px;
+        border: 3px solid rgb(255, 140, 0);
+        border-radius: 9px;
+        box-shadow: 3px 6px 9px orange;
+        color: rgb(90, 50, 0);
+      }
+      header {
+        margin-bottom: 100px;
+      }
+      footer {
+        margin-top: 100px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid rgb(78, 51, 0);
+        border-collapse: collapse; /* ya tengo los bordes pegados */
+      }
+    </style>
+  </head>
+  <body>
+    <header id="inicio">
+      <h1>Tablas</h1>
+      <hr />
+    </header>
+    <main>
+      <section>
+        <h2>Las <strong>Tablas</strong></h2>
+        <p>
+          Las <strong>Tablas</strong> son un elemento muy frecuente en las
+          páginas web.
+        </p>
+        <p>Para insertar una tabla utilizamos la etiqueta 'table'</p>
+        <p>Ejemplo:</p>
+        <table border="1">
+          <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Edad</th>
+          </tr>
+          <tr>
+            <td>Alberto</td>
+            <td>Fernández</td>
+            <td>50</td>
+          </tr>
+          <tr>
+            <td>José</td>
+            <td>Pérez</td>
+            <td>45</td>
+          </tr>
+          <tr>
+            <td>Eva</td>
+            <td>López</td>
+            <td>37</td>
+          </tr>
+        </table>
+        <p>
+          Cada 'corte' que hago en la fila, va entre etiquetas 'th', que suelen
+          ser las cabeceras de cada columna que van típicamente en la primera
+          línea
+        </p>
+        <p>
+          Al borde de la tabla podemos darle estilo con el atributo
+          <strong><em>'border'</em></strong> con <strong><em>'CSS'</em></strong
+          >. Para esto en 'head' introducimos la etiqueta
+          <strong><em>'style</em></strong
+          >, y permite aplicar <strong><em>'CSS'</em></strong> a todas las
+          etiquetas que componen la table.
+        </p>
+      </section>
+      <br />
+      <section>
+        <h2>
+          <strong>colSpan</strong> y
+          <strong>caption</strong>
+        </h2>
+        <p>Ejemplo:</p>
+        <table>
+          <caption>
+            Listín Telefónico
+          </caption>
+          <tr>
+            <th>Nombre</th>
+            <th colspan="3">Teléfono</th>
+          </tr>
+          <tr>
+            <td>Alberto</td>
+            <td>654654654</td>
+            <td>852852852</td>
+            <td>951951951</td>
+          </tr>
+        </table>
+        <p>Con la etiqueta <em>caption</em> añadimos un título a la tabla</p>
+        <p>
+          Con la etiqueta <em>colspan</em> podemos decirle que una celda ocupa 2
+          columnas o más.
+        </p>
+      </section>
+      <br />
+      <section>
+        <h2>RowSpan</h2>
+        <p>Con <em>RowSpan</em> vemos la posibilidad de unir dos filas.</p>
+        <p>Ejemplo:</p>
+        <table>
+          <tr>
+            <th>Nombre:</th>
+            <td>Alberto</td>
+          </tr>
+          <tr>
+            <th rowspan="2">Teléfono:</th>
+            <td>653653653</td>
+          </tr>
+          <tr>
+            <td>751751751</td>
+          </tr>
+        </table>
+      </section>
+      <br />
+      <section>
+        <h2>CSS a las columnas</h2>
+        <p>
+          Aplicaciones de las distintas propiedades <strong>CSS</strong> a las
+          distintas columnas de la tabla.
+        </p>
+        <p>Ejemplo:</p>
+        <table>
+          <colgroup>
+            <col style="background-color: rgb(255, 163, 163)" />
+            <col style="background-color: rgb(255, 255, 164)" />
+            <col style="background-color: rgb(255, 164, 164)" />
+          </colgroup>
+          <tr>
+            <th>ISBN</th>
+            <th>Titulo</th>
+            <th>Precio</th>
+          </tr>
+          <tr>
+            <td>347</td>
+            <td>Empezando HTML</td>
+            <td>53€</td>
+          </tr>
+          <tr>
+            <td>5869207</td>
+            <td>Intro a CSS</td>
+            <td>49€</td>
+          </tr>
+        </table>
+      </section>
+    </main>
+    <br /><br />
+    <a href="#inicio">inicio página</a>
+    <footer>
+      <p>
+        <i>&copy; 2026 Tablas. Todos los derechos reservados.</i>
+      </p>
+      <p><small>by Alberto Fernández Sánchez</small></p>
+      <br />
+    </footer>
+  </body>
+</html>

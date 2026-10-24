@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listas</title>
+    <style>
+      body {
+        background-image: url(images/background.png);
+        margin: 100px auto;
+        padding: 100px;
+        width: 800px;
+        border: 3px solid darkblue;
+        border-radius: 9px;
+        box-shadow: 3px 6px 9px blue;
+        color: darkblue;
+      }
+      header {
+        margin-bottom: 100px;
+      }
+      footer {
+        margin-top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Listas</h1>
+      <hr />
+    </header>
+    <main>
+      <p>
+        Otro elemento muy común en las páginas son las listas. Hay de dos tipos,
+        con orden (numeradas), o sin orden (no numeradas)
+      </p>
+      <section>
+        <article>
+          <h2>Lista Ordenada <strong>'ol'</strong></h2>
+          <p>
+            Las listas ordenadas empiezan por la etiqueta 'ol' - ordered list -
+          </p>
+          <p>Ejemplo:</p>
+          <ol type="a">
+            <li>Abrir el editor</li>
+            <li>Crear una página nueva</li>
+            <li>Guardarla como .html</li>
+            <li>Publicarla en un servidor</li>
+          </ol>
+          <p>
+            Con el atributo <em>'type="a" '</em> podemos elegir entre números o
+            letras para ordenar.
+          </p>
+        </article>
+        <article>
+          <h2>Lista sin ordenar <strong>'ul'</strong></h2>
+          <p>
+            Las listas no ordenadas se crean con la etiqueta 'ul' - unordered
+            list -
+          </p>
+          <p>Ejemplo:</p>
+          <ul style="list-style-type: circle">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>PHP</li>
+          </ul>
+          <p>
+            Con el atributo <em>'style="list-style-type: circle'</em> podemos
+            cambiar el aspecto del punto
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <p>
+        <i>&copy; 2026 Listas. Todos los derechos reservados.</i>
+      </p>
+      <p><small>by Alberto Fernández Sánchez</small></p>
+      <br />
+    </footer>
+  </body>
+</html>
