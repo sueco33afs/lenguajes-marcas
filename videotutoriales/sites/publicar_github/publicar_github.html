@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Enlaces II</title>
+    <title>Páginas en GitHub</title>
     <style>
       body {
         background-image: url(images/background.png);
@@ -31,73 +31,97 @@
   </head>
   <body>
     <header>
-      <h1>Enlaces II</h1>
-      <h2>Enlace a un marcador</h2>
+      <h1>Subir Páginas a GitHub</h1>
+      <hr />
     </header>
-    <hr />
     <main>
       <section>
-        <h2><em>Creación de marcadores dentro de una etiqueta</em></h2>
+        <h2>Git</h2>
         <p>
-          Cómo hacer enlaces a un punto de una página en lugar de una página
-          completa
+          Git es un sistema de control de versiones distribuido que permite a
+          los desarrolladores rastrear y gestionar cmaibos en el código fuente
+          de un proyecto.
         </p>
-        <p>
-          <a
-            href="https://www.defensa.gob.es/portaldecultura/san-juan-bosco"
-            target="_self"
-            >SAN JUAN BOSCO PATRON del CUERPO DE ESPECIALISTAS del Ejercito de
-            Tierra</a
-          >
-        </p>
-        <p>o en una nueva 'blank'.</p>
-        <p>
-          <a
-            href="https://www.defensa.gob.es/portaldecultura/san-juan-bosco"
-            target="_blank"
-            >SAN JUAN BOSCO PATRON del CUERPO DE ESPECIALISTAS del Ejercito de
-            Tierra</a
-          >
-        </p>
+        <article>
+          <ul style="list-style: circle">
+            <li>
+              <strong>Control de versiones: </strong>Permite llevar un registro
+              de las modificaciones realizadas en el código a través del tiempo.
+            </li>
+            <li>
+              <strong>Ramas (Branches): </strong>Git permite crear aramas para
+              trabajar en nuevas características o arreglos de errores sin
+              afectar el código principal.
+            </li>
+            <li>
+              La descarga de <em>Git</em> la hacemos desde
+              <a href="https://git-scm.com/install/" target="_blank"></a>
+            </li>
+          </ul>
+        </article>
+        <article>
+          <p>
+            Tras la instalación buscamos el programa <strong>Git Bash</strong>.
+            Que es un intérprete de comandos donde podemos ejecutar comandos del
+            Git.
+          </p>
+          <p>
+            <strong
+              >Para configurar su nombre de usuario de Git, siga estos
+              pasos:</strong
+            >
+          </p>
+          <ul style="list-style-type: circle">
+            <li>
+              En la línea de comando, escriba el siguiente comando
+              <em
+                ><strong>Git: git</strong> config --global user.name "your
+                username"</em
+              >
+            </li>
+            <li>
+              Para <strong>configurar</strong> su dirección de correo
+              electrónico de <strong>Git</strong>, escriba el siguiente comando
+              de
+              <em
+                ><strong>Git: git</strong> config --global user.email "your
+                email address</em
+              >
+            </li>
+          </ul>
+        </article>
       </section>
-      <br />
       <section>
-        <h2><em>Enlaces a páginas del sitio</em></h2>
-        También podemos crear enlaces a páginas del mismo sitio, como el
-        siguiente que te lleva al Índice de la lista de videotutoriales.
-        <a
-          href="/lenguajes-marcas/videotutoriales/sites/Intro_HTML/Introduccion_HTML.html"
-          style="color: darkblue"
-          ><em>Click aquí</em></a
-        >
-      </section>
-      <br />
-      <section>
-        <h2><em>Enlaces a una carpeta padre</em></h2>
-        <p>
-          NO SE DEBE PONER de manera ABSOLUTA, por ejemplo
-          'C:/Escritorio/HTML/Enlaces/archivos/archivo1.html', ESTARÍA MAL,
-          aunque funcione en mi equipo, seguro que no funcionara cuando se suba
-          a un servidor
-        </p>
-        <p><a href="/lenguajes-marcas/index.html">Índice</a></p>
-      </section>
-      <br />
-      <section>
-        <h2><em>Imágenes como enlaces</em></h2>
-        <p>
-          <a href="https://www.ccn-cert.cni.es/es/" target="_blank">
-            <img
-              src="images/cybersecurity.png"
-              alt="imagen creada por IA"
-              width="500px"
-              height="300px"
-            />
-          </a>
-          <figcaption><small>Imagen creada por IA</small></figcaption>
-        </p>
-        <h2><em>Documentos como enlaces</em></h2>
-        <a href="docu/Guia_HTML.pdf">Guía HTML</a>
+        <section>
+          <h2>Repositorio de Git</h2>
+          <p>
+            Nos vamos a VS Code y pulsamos en el icono de
+            <em>Source Control</em> y a continuación pulso en inicializar
+            repositorio.
+          </p>
+          <p>
+            Veo todos los archivos sin guardar en el repositorio. Pongo un
+            nombre y pulso en confirmación, quedando los cambios guardados en el
+            repositorio local.
+          </p>
+          <p>
+            Ahora los publicaremos en <strong>GitHub</strong>, para eso le
+            ponemos un nombre y pulsaremos en <em>Publish Branch</em>, de
+            momento todo el proyecto queda almacenado en la rama <em>main</em>.
+          </p>
+        </section>
+        <section>
+          <p>
+            Me logeo en mi cuenta de <strong>GitHub</strong> a través del
+            navegador. Debo tener ya creada una cuenta. Vuelvo a VS Code y en la
+            barra superior <em>Open Quick Access</em> indico el nombre del
+            repositorio.
+          </p>
+          <p>
+            Una vez subido todo, ya podría abrir mis archivos desde el siguiente
+            enlace
+          </p>
+        </section>
       </section>
     </main>
     <footer>
