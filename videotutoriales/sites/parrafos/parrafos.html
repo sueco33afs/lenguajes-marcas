@@ -3,22 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Párrafos, br y pre</title>
+    <title>Párrafos</title>
     <style>
       body {
         background-image: url(images/background.png);
         background-size: cover;
         font-family: Arial, sans-serif;
-        margin: 0 auto;
-        max-width: 900px;
-        padding: 100px 0;
+        margin: 100px auto;
+        padding: 75px;
+        width: 900px;
         color: darkblue;
         font-size: large;
         font-family: Arial, Helvetica, sans-serif;
+        border: 3px solid rgb(212, 212, 0);
+        border-radius: 9px;
+        box-shadow: 3px 5px 7px yellow;
+        color: rgb(28, 37, 9);
       }
       header {
         text-align: center;
         margin-bottom: 55px;
+        border-bottom: 3px solid rgb(100, 133, 34);
       }
       li {
         margin-bottom: 25px;
@@ -27,33 +32,26 @@
         padding: 0 20px;
         margin-bottom: 100px;
       }
-      header,
-      main,
-      footer {
-        background-color: rgba(182, 211, 255, 0.397);
-        padding: 30px 20px;
-        border-radius: 4px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.267);
-      }
     </style>
   </head>
   <body>
     <header>
-      <h1>Párrafos, br y pre</h1>
+      <h1>Párrafos</h1>
       <p>
         Los párrafos son elementos de bloque que se utilizan para agrupar
         contenido textual.
       </p>
-      <hr />
     </header>
     <main>
       <section>
+        <h2>Etiquetas <em>'p'</em> <em>'br'</em> y <em>'pre'</em></h2>
         <article>
           <ul>
             <li>
-              'p' (paragraph) Representa un párrafo: un bloque de texto con
-              sentido propio. Es un elemento de bloque (block-level) y los
-              navegadores le añaden margen arriba y abajo por defecto.
+              <strong>'p' (paragraph)</strong> Representa un párrafo: un bloque
+              de texto con sentido propio. Es un elemento de bloque
+              (block-level) y los navegadores le añaden margen arriba y abajo
+              por defecto.
               <p style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.514)">
                 Primer párrafo.
               </p>
@@ -62,8 +60,9 @@
               </p>
             </li>
             <li>
-              'br' (line break) Inserta un salto de línea dentro de un texto. Es
-              un elemento vacío (void element): no tiene etiqueta de cierre.
+              <strong>'br' (line break)</strong> Inserta un salto de línea
+              dentro de un texto. Es un elemento vacío (void element): no tiene
+              etiqueta de cierre.
               <p style="background-color: rgb(73, 173, 255)">
                 En un lugar de la mancha <br />
                 de cuyo nombre no quiero acordarme. <br />
@@ -73,16 +72,16 @@
               </p>
             </li>
             <li>
-              'pre' (preformatted text) Enfocada a contener código de
-              programación, muestra el texto tal cual está escrito: conserva
-              espacios, tabuladores y saltos de línea, y usa fuente
+              <strong>'pre' (preformatted text)</strong> Enfocada a contener
+              código de programación, muestra el texto tal cual está escrito:
+              conserva espacios, tabuladores y saltos de línea, y usa fuente
               monoespaciada por defecto. Normalmente HTML colapsa los espacios
               en blanco; 'pre' lo evita.
               <p>Ejemplo de JavaScript:</p>
               <pre>
-                for (const i; i < 10; i++) {
+                  <strong><em>for (const i; i < 10; i++) {
                   alert ("Dime un número: " + i);
-                }
+                }</em></strong>
               </pre>
             </li>
           </ul>

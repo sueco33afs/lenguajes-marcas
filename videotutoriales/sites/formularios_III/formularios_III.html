@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formularios I</title>
+    <title>Formularios III</title>
     <style>
       body {
         background-image: url(images/background.png);
@@ -38,127 +38,44 @@
   </head>
   <body>
     <header id="inicio">
-      <h1>Formularios II</h1>
+      <h1>Formularios III</h1>
     </header>
     <main>
       <section>
-        <h2>Tipos de 'input' más utilizados</h2>
+        <h2>Atributos de Campos de un Formulario</h2>
         <p>
-          En este videotutorial se echa un vistazo a los tipos de campos
-          <strong><em>'input'</em></strong> más utilizados a la hora de hacer
-          formularios.
+          En este videotutorial se ven algunos atributos adicionales que pueden
+          llevar los campos de los formularios.
         </p>
         <p>
-          Debemos saber que los inputs de los formularios son elementos de
-          linea. Esto quiere decir que por defecto aparecen unos a continuación
-          de otros. Si quiero que aparezcan unos debajo de otro, dedo meterlos,
-          por ejemplo, dentro de un párrafo <em>'p'</em> que es un elemento de
-          bloque.
+          El atributo <strong><em>'value'</em></strong> contiene el valor
+          inicial del campo nada más abrirse el formulario
         </p>
-        <p>Los <em>'input'</em> no tienen cierre.</p>
         <p>
-          Aquí aparece el atributo <strong><em>'maxlength</em></strong> que
-          limita el número de caracteres que puedo introducir.
+          El atributo <strong><em>'maxlength'</em></strong> número máximo de
+          caracteres que el usuario puede escribir en el campo (solo para campos
+          de texto).
         </p>
-        <p>Debemos ponerle un nombre al campo para determinar su valor.</p>
         <p>
-          Se pone un <em>'id'</em> para vincularlo con la etiqueta
-          <em>'label'</em>
+          El atributo <strong><em>'checked'</em></strong> atributo booleano que
+          marca por defecto un checkbox o radio button como seleccionado.
         </p>
-        <p>Ejemplo:</p>
-        <form action="procedamos.php">
-          <fieldset>
-            <legend>Datos Personales</legend>
-            <p>
-              <label for="name">Nombre: </label><br />
-              <input type="text" maxlength="15" id="name" name="Nombre" />
-            </p>
-            <p>
-              <label for="passwd">Password: </label><br />
-              <input
-                type="password"
-                maxlength="15"
-                id="passwd"
-                name="Password"
-              />
-            </p>
-          </fieldset>
-        </form>
-      </section>
-      <br /><br />
-      <section>
-        <h2>Botónes de 'Radio'</h2>
         <p>
-          Para que los botones de radio sean excluyentes y unos excluyan los
-          otros, es muy <strong>Importante</strong>:
+          El atributo <strong><em>'placeholder'</em></strong> texto de ayuda que
+          se muestra en gris dentro del campo vacío, y desaparece al escribir;
+          no se envía como valor.
         </p>
-        <ol type="a">
-          <li>Ponerles un <strong>name</strong>.</li>
-          <li>
-            Ese name debe ser <strong>EL MISMO</strong> en todos los botones de
-            radio que indiquen el mismo campo, por ejemplo <em>'género'</em>.
-          </li>
-        </ol>
-        <p>Ejemplo:</p>
-        <form action="procedamos.php">
-          <fieldset>
-            <legend>Datos Personales</legend>
-            <p>
-              <label for="nombre">Nombre:</label><br />
-              <input type="text" id="nombre" name="Name" />
-            </p>
-            <p>
-              <label
-                >Apellidos: <br /><input
-                  type="text"
-                  id="apellidos"
-                  name="Apellidos"
-              /></label>
-            </p>
-            <p>
-              <label for="telefono">Teléfono:</label><br /><input
-                type="number"
-                id="telefono"
-                name="Teléfono"
-              />
-            </p>
-            <p>
-              <label for="hombre">Hombre: </label
-              ><input
-                type="radio"
-                name="genero"
-                id="hombre"
-                value="H"
-                checked
-              />
-              <label for="mujer">Mujer: </label
-              ><input type="radio" name="genero" id="mujer" value="M" />
-            </p>
-            <input type="submit" name="Enviar" id="enviar" />
-          </fieldset>
-        </form>
-      </section>
-      <br /><br />
-      <section>
-        <h2>Casilla de chequeo 'checkbox'</h2>
         <p>
-          Si queremos que la casilla de chequeo aparezca marcada de inicio, en
-          el <em>input</em> debemos poner <strong><em>checked</em></strong>
+          El atributo <strong><em>'readonly'</em></strong> el usuario no puede
+          modificar el valor del campo, pero sí puede seleccionarlo/copiarlo, y
+          <strong>sí se envía</strong> en el formulario al hacer submit.
         </p>
-        <p><em>Los 'input': </em></p>
-        <ul style="list-style-type: circle">
-          <li>
-            El input tipo <strong>submit</strong> tiene aspecto de botón, no
-            necesita que pongamos <em>name</em> y en el
-            <strong>'value'</strong> ponemos que queremos que aparezca en el
-            botón.
-          </li>
-          <li>
-            El input tipo <strong>reset</strong> que también es un botón, sirve
-            para dejar el formulario con los valores iniciales.
-          </li>
-        </ul>
-        <p><strong>select</strong>, para listas desplegables</p>
+        <p>
+          El atributo <strong><em>'disabled'</em></strong> el campo queda
+          completamente inactivo (no se puede ni seleccionar ni editar), suele
+          mostrarse "deshabilitado" visualmente, y
+          <strong>no se envía</strong> su valor con el formulario.
+        </p>
 
         <p>Ejemplo:</p>
         <form action="procedamos.php" method="get">
@@ -166,17 +83,33 @@
             <legend>Datos Personales</legend>
             <p>
               <label for="nombre2">Nombre:</label><br />
-              <input type="text" id="nombre2" name="Name" />
+              <input
+                type="text"
+                id="nombre2"
+                maxlength="15"
+                placeholder="Escribe tu nombre"
+                required
+              />
             </p>
             <p>
               <label for="apellidos2">Apellidos: </label>
-              <br /><input type="text" id="apellidos2" name="Apellidos" />
+              <br /><input
+                type="text"
+                id="apellidos2"
+                maxlength="15"
+                name="Apellidos"
+                placeholder="Escribe tus apellidos"
+                required
+              />
             </p>
             <p>
-              <label for="telefono2">Teléfono:</label><br /><input
+              <label for="telefono2">Teléfono: <small>readonly</small></label
+              ><br /><input
                 type="number"
                 id="telefono2"
                 name="Teléfono"
+                maxlength="9"
+                readonly
               />
             </p>
             <p>
@@ -193,8 +126,8 @@
             </p>
             <p>
               <label for="nacionalidad">provincia: </label
-              ><select name="provincia" id="provincia">
-                <option value=""></option>
+              ><select name="provincia" id="provincia" disabled>
+                <option value="Toledo"></option>
                 <option value="to">Toledo</option>
                 <option value="cr">Ciudad Real</option>
                 <option value="cu">Cuenca</option>
@@ -203,63 +136,18 @@
               </select>
             </p>
             <p>
-              <label for="fumador">Fumador: </label
-              ><input type="checkbox" name="fumador" id="fumador" />
-            </p>
-            <p><label for="obsv">Observaciones: </label></p>
-            <textarea name="obsv" id="obsv" cols="50" rows="5">
+              <label for="obsv">Observaciones: </label>
+              <textarea name="obsv" id="obsv" cols="50" rows="5">
 Escriba aquí ... </textarea
-            >
+              >
+            </p>
+            <p>
+              Lea detenidamente las condiciones del contrato
+              <a href="https://www.iesjuanbosco.es/">aquí</a>
+            </p>
+            <p><input type="checkbox" checked /> Acepto condiciones</p>
           </fieldset>
-          <br />
-          <fieldset>
-            <legend>Perfíl</legend>
-            <p>
-              <label for="date">Birth: </label><br /><input
-                type="date"
-                name="date"
-                id="date"
-              />
-            </p>
-            <p>
-              <label for="edad">Edad: </label><br /><input
-                type="number"
-                name="edad"
-                id="edad"
-                min="1"
-                max="105"
-              />
-            </p>
-            <p>
-              <label for="email">Email: </label><br /><input
-                type="email"
-                name="email"
-                id="email"
-              />
-            </p>
-            <p>
-              <label for="usuario">Id Ususario: </label><br /><input
-                type="text"
-                maxlength="15"
-                name="Usuario"
-                id="usuario"
-              />
-            </p>
-            <p>
-              <label for="color">Color: </label><br /><input
-                type="color"
-                name="color"
-                id="color"
-              />
-            </p>
-            <p>
-              <label for="file">Subir archivos: </label><br /><input
-                type="file"
-                name="file"
-                id="file"
-              />
-            </p>
-          </fieldset>
+
           <br /><br />
           <!-- Botones de envío y reset -->
           <input type="submit" name="Enviar" id="enviar2" />
@@ -271,7 +159,7 @@ Escriba aquí ... </textarea
     <a href="#inicio">inicio página</a>
     <footer>
       <p>
-        <i>&copy; 2026 Formularios II. Todos los derechos reservados.</i>
+        <i>&copy; 2026 Formularios III. Todos los derechos reservados.</i>
       </p>
       <p><small>by Alberto Fernández Sánchez</small></p>
       <br />
