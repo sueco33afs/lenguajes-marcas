@@ -9,11 +9,11 @@
         background-image: url(images/background.png);
         margin: 100px auto;
         padding: 100px;
-        width: 900px;
-        border: 3px solid darkgreen;
+        width: 950px;
+        border: 3px solid brown;
         border-radius: 9px;
-        box-shadow: 3px 6px 9px green;
-        color: rgb(0, 43, 0);
+        box-shadow: 3px 6px 9px rgb(190, 49, 49);
+        color: rgb(80, 20, 20);
         font-size: large;
         font-family: Arial, Helvetica, sans-serif;
       }
@@ -25,122 +25,87 @@
         margin-top: 100px;
       }
       fieldset {
-        border: 2px solid darkgreen;
+        border: 1px solid green;
         border-radius: 6px;
         max-width: 45%;
       }
       label {
         font-family: "Times New Roman", Times, serif;
         font-style: italic;
-        color: blueviolet;
+        color: green;
       }
     </style>
   </head>
   <body>
     <header id="inicio">
-      <h1>Formularios I</h1>
+      <h1>Formularios II</h1>
     </header>
     <main>
       <section>
-        <h2>Formularios</h2>
+        <h2>Tipos de 'input' más utilizados</h2>
         <p>
-          Los formularios web son utilizados para hacer login, hacer pedidos,
-          introudcir datos en general.
+          En este videotutorial se echa un vistazo a los tipos de campos
+          <strong><em>'input'</em></strong> más utilizados a la hora de hacer
+          formularios.
         </p>
         <p>
-          Los formularios se introducen con la etiqueta
-          <strong><em>'form'</em></strong>
+          Debemos saber que los inputs de los formularios son elementos de
+          linea. Esto quiere decir que por defecto aparecen unos a continuación
+          de otros. Si quiero que aparezcan unos debajo de otro, dedo meterlos,
+          por ejemplo, dentro de un párrafo <em>'p'</em> que es un elemento de
+          bloque.
         </p>
+        <p>Los <em>'input'</em> no tienen cierre.</p>
         <p>
-          El atributo <strong><em>action</em></strong> indica que a que página
-          van dirigidos los datos. Es común que la página no esté en
-          <strong><em>html</em></strong
-          >, sino en un lenguaje d eprogramación muy común del lado del servidor
-          que se llama <strong><em>php</em></strong
-          >. Por eso es común que la página de destno tenga extensión
-          <strong><em>.php</em></strong
-          >.
+          Aquí aparece el atributo <strong><em>'maxlength</em></strong> que
+          limita el número de caracteres que puedo introducir.
         </p>
-        <p>Para este ejemplo, la página aún no existe.</p>
+        <p>Debemos ponerle un nombre al campo para determinar su valor.</p>
         <p>
-          El otro atributo típico de la etiqueta form es
-          <strong><em>method</em></strong
-          >. Este atributo tiene dos valores:
-        </p>
-        <ul style="list-style-type: disc">
-          <li>
-            <strong>get</strong>, los datos serán visibles en la url y están por
-            tanto limitados a la longitud de la url (es la opció si no se pone
-            nada). No es adecuada por tanto para enviar contraseñas o archivos
-            muy grandes.
-          </li>
-          <li>
-            <strong>post</strong>, los datos no serán visibles en la url y no
-            están limitados. Se pueden enviar contraseñas sin que se vean o
-            archivos grandes.
-          </li>
-        </ul>
-        <p>
-          La etiqueta <strong>fieldset</strong> no es un elemento obligatorio,
-          pero queda bien para agrupar campos, como "Datos Personales", "Datos
-          Bancarios", ... etc. La etiqueta del grupo de datos se introduce con
-          <strong><em>'legend'</em></strong>
+          Se pone un <em>'id'</em> para vincularlo con la etiqueta
+          <em>'label'</em>
         </p>
         <p>Ejemplo:</p>
-        <form action="procesa.php" method="get">
+        <form action="procedamos.php">
           <fieldset>
             <legend>Datos Personales</legend>
             <p>
-              Nombre: <br />
-              <input type="text" name="nombre" value="nombre" />
+              <label for="name">Nombre: </label><br />
+              <input type="text" maxlength="15" id="name" name="Nombre" />
             </p>
             <p>
-              Apellidos: <br />
-              <input type="text" name="apellidos" value="apellidos" />
+              <label for="passwd">Password: </label><br />
+              <input
+                type="password"
+                maxlength="15"
+                id="passwd"
+                name="Password"
+              />
             </p>
-            <br />
-            <input type="submit" value="Enviar" />
           </fieldset>
         </form>
-        <p>
-          Si no nos gusta como queda el espaciado con <em>'br'</em> podemos
-          poner un párrafo <strong>'p'</strong> que contenga la etiqueta.
-        </p>
-        <p>
-          Al pinchar en <strong>'Enviar'</strong>, vemos que aparece un error
-          lógico debido a que no existe el archivo
-          <strong><em>procesa.php</em></strong
-          >, pero en la url si aparecen los nombres de los inputs,<em
-            >'campos'</em
-          >
-        </p>
-        <p>Todos los <em>input</em>, deben de llevar <em>'name'</em></p>
       </section>
-      <br />
+      <br /><br />
       <section>
-        <h2>Etiqueta 'label'</h2>
+        <h2>Botónes de 'Radio'</h2>
         <p>
-          Sirve para asociar un <em>'input'</em> con la etiquetita que tiene
-          delante. Esto es, 'nombre', 'apellidos', ... No es imprescindible pero
-          aporta dos cosas:
+          Para que los botones de radio sean excluyentes y unos excluyan los
+          otros, es muy <strong>Importante</strong>:
         </p>
-        <ul style="list-style-type: georgian">
+        <ol type="a">
+          <li>Ponerles un <strong>name</strong>.</li>
           <li>
-            Al hacer click en la etiqueta, el foco <em>'el cursor'</em>, se
-            sitúa en el input que tiene asociado. Eso lo hace más accesible.
+            Ese name debe ser <strong>EL MISMO</strong> en todos los botones de
+            radio que indiquen el mismo campo, por ejemplo <em>'género'</em>.
           </li>
-          <li>
-            Permite aplicar estilo <strong>CSS</strong> a todas las etiquetas a
-            la vez, consiguiendo un aspecto más homogeneo.
-          </li>
-        </ul>
+        </ol>
         <p>Ejemplo:</p>
-        <form action="procesa.php">
+        <form action="procedamos.php">
           <fieldset>
             <legend>Datos Personales</legend>
             <p>
-              <label for="name">Nombre:</label><br />
-              <input type="text" id="name" name="Name" />
+              <label for="nombre">Nombre:</label><br />
+              <input type="text" id="nombre" name="Name" />
             </p>
             <p>
               <label
@@ -158,25 +123,155 @@
               />
             </p>
             <p>
-              <label for="Password">Password: </label><br /><input
-                type="password"
-                id="Password"
-                name="password"
+              <label for="hombre">Hombre: </label
+              ><input
+                type="radio"
+                name="genero"
+                id="hombre"
+                value="H"
+                checked
+              />
+              <label for="mujer">Mujer: </label
+              ><input type="radio" name="genero" id="mujer" value="M" />
+            </p>
+            <input type="submit" name="Enviar" id="enviar" />
+          </fieldset>
+        </form>
+      </section>
+      <br /><br />
+      <section>
+        <h2>Casilla de chequeo 'checkbox'</h2>
+        <p>
+          Si queremos que la casilla de chequeo aparezca marcada de inicio, en
+          el <em>input</em> debemos poner <strong><em>checked</em></strong>
+        </p>
+        <p><em>Los 'input': </em></p>
+        <ul style="list-style-type: circle">
+          <li>
+            El input tipo <strong>submit</strong> tiene aspecto de botón, no
+            necesita que pongamos <em>name</em> y en el
+            <strong>'value'</strong> ponemos que queremos que aparezca en el
+            botón.
+          </li>
+          <li>
+            El input tipo <strong>reset</strong> que también es un botón, sirve
+            para dejar el formulario con los valores iniciales.
+          </li>
+        </ul>
+        <p><strong>select</strong>, para listas desplegables</p>
+
+        <p>Ejemplo:</p>
+        <form action="procedamos.php" method="get">
+          <fieldset>
+            <legend>Datos Personales</legend>
+            <p>
+              <label for="nombre2">Nombre:</label><br />
+              <input type="text" id="nombre2" name="Name" />
+            </p>
+            <p>
+              <label for="apellidos2">Apellidos: </label>
+              <br /><input type="text" id="apellidos2" name="Apellidos" />
+            </p>
+            <p>
+              <label for="telefono2">Teléfono:</label><br /><input
+                type="number"
+                id="telefono2"
+                name="Teléfono"
+              />
+            </p>
+            <p>
+              <label for="hombre2">Hombre: </label
+              ><input
+                type="radio"
+                name="genero"
+                id="hombre2"
+                value="H"
+                checked
+              />
+              <label for="mujer2">Mujer: </label
+              ><input type="radio" name="genero" id="mujer2" value="M" />
+            </p>
+            <p>
+              <label for="nacionalidad">provincia: </label
+              ><select name="provincia" id="provincia">
+                <option value=""></option>
+                <option value="to">Toledo</option>
+                <option value="cr">Ciudad Real</option>
+                <option value="cu">Cuenca</option>
+                <option value="gu">Guadalajara</option>
+                <option value="alb">Albacete</option>
+              </select>
+            </p>
+            <p>
+              <label for="fumador">Fumador: </label
+              ><input type="checkbox" name="fumador" id="fumador" />
+            </p>
+            <p><label for="obsv">Observaciones: </label></p>
+            <textarea name="obsv" id="obsv" cols="50" rows="5">
+Escriba aquí ... </textarea
+            >
+          </fieldset>
+          <br />
+          <fieldset>
+            <legend>Perfíl</legend>
+            <p>
+              <label for="date">Birth: </label><br /><input
+                type="date"
+                name="date"
+                id="date"
+              />
+            </p>
+            <p>
+              <label for="edad">Edad: </label><br /><input
+                type="number"
+                name="edad"
+                id="edad"
+                min="1"
+                max="105"
+              />
+            </p>
+            <p>
+              <label for="email">Email: </label><br /><input
+                type="email"
+                name="email"
+                id="email"
+              />
+            </p>
+            <p>
+              <label for="usuario">Id Ususario: </label><br /><input
+                type="text"
+                maxlength="15"
+                name="Usuario"
+                id="usuario"
+              />
+            </p>
+            <p>
+              <label for="color">Color: </label><br /><input
+                type="color"
+                name="color"
+                id="color"
+              />
+            </p>
+            <p>
+              <label for="file">Subir archivos: </label><br /><input
+                type="file"
+                name="file"
+                id="file"
               />
             </p>
           </fieldset>
+          <br /><br />
+          <!-- Botones de envío y reset -->
+          <input type="submit" name="Enviar" id="enviar2" />
+          <input type="reset" name="reset" id="reset" />
         </form>
-        <p>
-          La manera de dar <strong><em>CSS</em></strong> a todas las etiquetas
-          <em>'label'</em> es poniendo el nombre de la etiqueta entre llaves
-        </p>
       </section>
     </main>
     <br /><br />
     <a href="#inicio">inicio página</a>
     <footer>
       <p>
-        <i>&copy; 2026 Formularios I. Todos los derechos reservados.</i>
+        <i>&copy; 2026 Formularios II. Todos los derechos reservados.</i>
       </p>
       <p><small>by Alberto Fernández Sánchez</small></p>
       <br />
