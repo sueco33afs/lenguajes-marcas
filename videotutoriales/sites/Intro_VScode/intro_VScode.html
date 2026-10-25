@@ -7,38 +7,57 @@
     <style>
       body {
         background-image: url(images/background.png);
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: large;
+        font-style: normal;
+        color: rgb(0, 0, 94);
+      }
+      main {
+        background-color: rgba(195, 195, 255, 0.726);
         margin: 100px auto;
         padding: 75px;
         width: 900px;
         border: 3px solid darkblue;
         border-radius: 9px;
         box-shadow: 3px 5px 7px rgb(0, 0, 102);
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: large;
-        font-style: normal;
-        color: rgb(0, 0, 94);
       }
       header {
         text-align: center;
-        margin-bottom: 55px;
+        margin-bottom: 50px;
         border-bottom: 3px solid darkblue;
+      }
+      footer {
+        margin-top: 100px;
       }
       li {
         margin-bottom: 15px;
       }
+      .centered-img {
+        display: block;
+        margin: 0 auto;
+      }
     </style>
   </head>
   <body>
-    <header>
-      <h1>Introducción a VS Code</h1>
-      <p>
-        VS Code es un editor de texto liviano pero potente, desarrollado por
-        Microsoft.
-      </p>
-    </header>
     <main>
+      <header>
+        <h1>Introducción a VS Code</h1>
+        <p>
+          VS Code es un editor de texto liviano pero potente, desarrollado por
+          Microsoft.
+        </p>
+      </header>
+      <img
+        class="centered-img"
+        src="images/VSCode.png"
+        alt="logo_vscode"
+        width="25%"
+        height="25%"
+      />
       <section>
         <h2>Visual Studio Code</h2>
+        <br />
         <article>
           <ul>
             <li>
@@ -92,16 +111,17 @@
           </ul>
         </article>
       </section>
+      <footer>
+        <p>
+          <i
+            >&copy; 2026 Introducción a VS Code. Todos los derechos
+            reservados.</i
+          >
+        </p>
+        <p><small>by Alberto Fernández Sánchez</small></p>
+        <br />
+      </footer>
     </main>
     <br /><br />
-    <footer>
-      <p>
-        <i
-          >&copy; 2026 Introducción a VS Code. Todos los derechos reservados.</i
-        >
-      </p>
-      <p><small>by Alberto Fernández Sánchez</small></p>
-      <br />
-    </footer>
   </body>
 </html>
