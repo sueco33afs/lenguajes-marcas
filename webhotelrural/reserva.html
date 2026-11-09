@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Rural DAM - Reserva</title>
+    <link rel="icon" href="images/icon_logo_hotel.png" type="image/x-icon" />
+    <style>
+      body {
+        background-color: rgb(213, 255, 213);
+      }
+      h1 {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: blue;
+        text-align: center;
+      }
+      h2 {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: rgb(0, 70, 0);
+        text-align: center;
+      }
+      .image {
+        display: block;
+        margin: 0 auto;
+        padding: 25px;
+      }
+      main {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: large;
+        margin: 0 auto;
+        padding: 35px;
+        width: 50%;
+        text-align: justify;
+        border: 3px solid rgb(0, 70, 0);
+        border-radius: 10px;
+        box-shadow: 3px 5px 7px green;
+      }
+      .table {
+        border: 1px solid blue;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 8px 15px;
+      }
+      fieldset {
+        border: 2px solid rgb(0, 70, 0);
+        border-radius: 10px;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        src="images/logo_hotel_DAM.png"
+        alt="logo hotel"
+        width="5%"
+        class="image"
+      />
+      <h1>Haga su reserva</h1>
+    </header>
+    <main>
+      <p>Complete el siguiente formulario para hacer su reserva:</p>
+      <br />
+      <!-- Formulario de reserva -->
+      <form action="procesareserva.php" method="get">
+        <fieldset>
+          <legend>Datos Personales</legend>
+          <label for="nombre">Nombre:</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            maxlength="100"
+            required
+            autofocus
+          /><br /><br />
+          <label for="apellidos">Apellidos:</label>
+          <input
+            type="text"
+            id="apellidos"
+            name="apellidos"
+            maxlength="100"
+            required
+          /><br /><br />
+          <label for="DNI">DNI:</label>
+          <input
+            type="text"
+            id="DNI"
+            name="DNI"
+            maxlength="10"
+            placeholder="DNI con letra"
+            required
+          /><br /><br />
+        </fieldset>
+        <br />
+        <fieldset>
+          <legend>Datos de su Estancia</legend>
+          Habitación:
+          <label for="individual">Individual</label>
+          <input
+            type="radio"
+            id="individual"
+            name="habitación"
+            value="Individual"
+            checked
+          />
+          <label for="doble">Doble</label>
+          <input type="radio" id="doble" name="habitación" value="Doble" />
+          <label for="triple">Triple</label>
+          <input type="radio" id="triple" name="habitación" value="Triple" />
+          <br /><br />
+          <p>
+            <label for="clientes">Número de personas:</label>
+            <select name="clientes" id="clientes">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </p>
+          <br />
+          <p>
+            <label for="mascotas">Llevo mascotas:</label>
+            <input type="checkbox" id="mascotas" name="mascotas" />
+          </p>
+          <br />
+          <p>
+            <label for="fecha">Fecha de llegada:</label>
+            <input type="date" id="fecha" name="fecha" required /><br /><br />
+          </p>
+          <p>
+            <label for="hora">Hora de llegada</label>
+            <input type="time" id="hora" name="hora" />
+          </p>
+        </fieldset>
+
+        <br /><br />
+
+        <input type="submit" value="Reservar" /><input
+          type="reset"
+          value="Reiniciar"
+        />
+      </form>
+      <br /><br />
+      <footer>
+        <p><a href="index.html">Volver</a></p>
+        <p>&copy; 2026 Hotel Rural DAM. All rights reserved.</p>
+      </footer>
+    </main>
+  </body>
+</html>
