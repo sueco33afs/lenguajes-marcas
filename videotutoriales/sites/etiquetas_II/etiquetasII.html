@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="autor" content="Alberto Fernández Sánchez" />
+    <meta name="copyright" content="Propietario del copyright" />
+    <meta
+      name="keywords"
+      content="etiquetas, video, audio, favicon, iframe, meta"
+    />
+    <title>Etiquetas II</title>
+    <link rel="icon" href="images/css3.png" type="image/x-icon" />
+    <style>
+      body {
+        background-image: url(images/background.png);
+        display: block;
+        margin: 35px auto;
+        padding: 45px;
+        width: 55%;
+        color: rgb(128, 19, 0);
+        border: 3px solid rgb(129, 19, 0);
+        border-radius: 10px;
+        box-shadow: 3px 5px 7px rgb(255, 38, 0);
+      }
+      header {
+        text-align: center;
+        font-family: "Arial Black", sans-serif;
+        border-bottom: 3px solid;
+      }
+      video {
+        display: block;
+        margin: 0 auto;
+        padding: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Etiquetas video, audio, favicon, iframe, meta</h1>
+      <img src="images/css3.png" alt="logo_css3" width="25%" height="25%" />
+    </header>
+    <main>
+      <article>
+        <h2>Etiquetas 'meta'</h2>
+        <pre><code>&lt;meta charset="UTF-8" /&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+&lt;meta name="autor" content="Alberto Fernández Sánchez" /&gt;
+&lt;meta name="keywords" content="etiquetas, video, audio" /&gt;</code></pre>
+      </article>
+
+      <article>
+        <h2>Etiquetas 'video'</h2>
+        <p>
+          En HTML5, la etiqueta &lt;video&gt; se utiliza para insertar contenido
+          de video en una página web.
+        </p>
+        <video
+          src="videos/etiqueta_videoII.mp4"
+          width="350px"
+          height="200px"
+          controls
+          preload="metadata"
+        >
+          Tu navegador no soporta vídeos HTML5.
+        </video>
+      </article>
+      <article>
+        <h2>Etiquetas 'audio'</h2>
+      </article>
+      <article>
+        <h2>Etiquetas 'favicon'</h2>
+      </article>
+      <article>
+        <h2>Etiquetas 'iframe'</h2>
+      </article>
+    </main>
+  </body>
+</html>
