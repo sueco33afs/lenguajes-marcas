@@ -17,7 +17,7 @@
         display: block;
         margin: 35px auto;
         padding: 45px;
-        width: 55%;
+        width: 50%;
         color: rgb(128, 19, 0);
         border: 3px solid rgb(129, 19, 0);
         border-radius: 10px;
@@ -28,7 +28,8 @@
         font-family: "Arial Black", sans-serif;
         border-bottom: 3px solid;
       }
-      video {
+      video,
+      audio {
         display: block;
         margin: 0 auto;
         padding: 15px;
@@ -55,25 +56,70 @@
           En HTML5, la etiqueta &lt;video&gt; se utiliza para insertar contenido
           de video en una página web.
         </p>
-        <video
-          src="videos/etiqueta_videoII.mp4"
-          width="350px"
-          height="200px"
-          controls
-          preload="metadata"
-        >
+        <video width="350px" height="200px" controls preload="metadata">
+          <source src="videos/etiqueta_videoII.mp4" type="video/mp4" />
+          <source src="videos/etiqueta_videoII.ogg" type="video/ogg" />
           Tu navegador no soporta vídeos HTML5.
         </video>
       </article>
       <article>
         <h2>Etiquetas 'audio'</h2>
+        <p>
+          En HTML5, la etiqueta &lt;audio&gt; se utiliza para insertar contenido
+          de audio en una página web.
+        </p>
+        <audio controls preload="metadata">
+          <source src="audios/etiquetas_audio.mp3" type="audio/mpeg" />
+          <source src="audios/etiquetas_audio.ogg" type="audio/ogg" />
+          Tu navegador no soporta audio HTML5.
+        </audio>
       </article>
       <article>
         <h2>Etiquetas 'favicon'</h2>
+        <p>
+          La etiqueta &lt;link&gt; con el atributo rel="icon" se utiliza para
+          especificar el favicon de una página web.
+        </p>
+        <pre><code>&lt;link rel="icon" href="images/css3.png" type="image/x-icon" /&gt;</code></pre>
       </article>
       <article>
         <h2>Etiquetas 'iframe'</h2>
+        <p>
+          La etiqueta &lt;iframe&gt; se utiliza para incrustar otro documento
+          HTML dentro de la página actual.
+        </p>
+        <iframe
+          src="https://www.pildorasinformaticas.es/all-courses"
+          width="600"
+          height="400"
+          title="Warhammer40K"
+          frameborder="0"
+        ></iframe>
+        <br /><br />
+        <p>Video de youtube</p>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/6YVLLkWE_9w?si=R_14Fi0FrOm1SVVD"
+          title="YouTube video player"
+          frameborder="0"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+            web-share;
+          "
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </article>
     </main>
+    <br /><br />
+    <footer>
+      <p>&copy; 2026 Etiquetas II HTML5. by Alberto Fernández Sánchez</p>
+    </footer>
   </body>
 </html>
