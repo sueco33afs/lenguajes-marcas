@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS_I</title>
+    <style>
+      body {
+        background-image: url(images/background_CSS.png);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: large;
+        color: rgb(44, 29, 0);
+      }
+      main {
+        display: block;
+        margin: 0 auto;
+        max-width: 950px;
+        padding: 75px;
+        background-color: #ffe09e80;
+        border: 3px solid rgb(83, 44, 0);
+        border-radius: 9px;
+        box-shadow: inset;
+      }
+      header {
+        padding: 30px 40px;
+        border-bottom: 3px solid rgb(83, 44, 0);
+        text-align: center;
+      }
+      section {
+        border-bottom: 3px solid rgb(83, 44, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>3 Formas de aplicar CSS a una página web</h1>
+        <h2>Como incluir estilos</h2>
+      </header>
+      <section>
+        <article>
+          <h3>Estilo en línea</h3>
+          <p>
+            Es un método de aplicar CSS directamente a un elemento HTML
+            utilizando el atributo style.
+          </p>
+          <pre><code>&lt;h1 style="color: blue;"&gt;Título&lt;/h1&gt;</code></pre>
+        </article>
+        <article>
+          <h3>Hoja de estilo interna</h3>
+          <p>
+            Es un método de aplicar CSS dentro de la etiqueta &lt;style&gt; en
+            el interior de la etiqueta &lt;head&gt;.
+          </p>
+          <pre><code>&lt;style&gt;
+  p {
+    color: green;
+    font-weight: bold;
+    font-size: 2em;
+  }
+&lt;/style&gt;</code></pre>
+        </article>
+        <article>
+          <h3>Hoja de estilo externa</h3>
+          <p>
+            Es un método de aplicar CSS mediante un archivo externo con
+            extensión .css que se enlaza a la página HTML.
+          </p>
+          <pre><code>&lt;link rel="stylesheet" href="estilos.css"&gt;</code></pre>
+        </article>
+      </section>
+      <br />
+      <footer>
+        <p>&copy; 2026 3 Formas de aplicar CSS. Alberto Fernández Sánchez.</p>
+      </footer>
+      <p><a href="/videotutoriales_CSSI/index.html">Volver al índice</a></p>
+    </main>
+  </body>
+</html>
