@@ -4,63 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Párrafos</title>
-   
   </head>
   <body>
     <header>
       <h1>Párrafos</h1>
-
-      <p>
-        Los párrafos son elementos de bloque que se utilizan para agrupar
-        contenido textual.
-      </p>
     </header>
-    <main>
-      <section>
-        <h2>Etiquetas <em>'p'</em> <em>'br'</em> y <em>'pre'</em></h2>
-        <article>
-          <ul>
-            <li>
-              <strong>'p' (paragraph)</strong> Representa un párrafo: un bloque
-              de texto con sentido propio. Es un elemento de bloque
-              (block-level) y los navegadores le añaden margen arriba y abajo
-              por defecto.
-              <p style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.514)">
-                Primer párrafo.
-              </p>
-              <p style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.514)">
-                Segundo párrafo.
-              </p>
-            </li>
-            <li>
-              <strong>'br' (line break)</strong> Inserta un salto de línea
-              dentro de un texto. Es un elemento vacío (void element): no tiene
-              etiqueta de cierre.
-              <p style="background-color: rgb(73, 173, 255)">
-                En un lugar de la mancha <br />
-                de cuyo nombre no quiero acordarme. <br />
-                No ha mucho tiempo que vivía un hidalgo de los de lanza en
-                <br />
-                estocada.
-              </p>
-            </li>
-            <li>
-              <strong>'pre' (preformatted text)</strong> Enfocada a contener
-              código de programación, muestra el texto tal cual está escrito:
-              conserva espacios, tabuladores y saltos de línea, y usa fuente
-              monoespaciada por defecto. Normalmente HTML colapsa los espacios
-              en blanco; 'pre' lo evita.
-              <p>Ejemplo de JavaScript:</p>
-              <pre>
-                  <strong><em>for (const i; i < 10; i++) {
-                  alert ("Dime un número: " + i);
-                }</em></strong>
-              </pre>
-            </li>
-          </ul>
-        </article>
-      </section>
-    </main>
-
+    <p style="background-color: aqua">
+      En un lugar <br />
+      de la mancha <br />
+      de cuyo nombre no quiero <br />
+      acordarme. <br />
+    </p>
+    <p>Ejemplo de JavaScript</p>
+    <pre>
+          <strong><em>for (const i; i < 10; i++) {
+          alert ("Dime un número: " + i);
+          }</em></strong>
+      </pre>
   </body>
 </html>

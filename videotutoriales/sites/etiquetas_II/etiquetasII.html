@@ -1,96 +1,71 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="autor" content="Alberto Fernández Sánchez" />
-    <meta name="copyright" content="Propietario del copyright" />
+    <meta name="author" content="Alberto Fernández Sánchez" />
+    <meta name="keywords" content="html, video, css" />
     <meta
-      name="keywords"
-      content="etiquetas, video, audio, favicon, iframe, meta"
+      name="description"
+      content="Introducción a las etiquetas audio, vide,favicon,iframe y meta"
     />
-    <title>Etiquetas II</title>
-    <link rel="icon" href="images/css3.png" type="image/x-icon" />
+    <meta name="robots" content="noindex" />
+    <title>Etiquetas video y audio y iframe</title>
+    <link
+      rel="icon"
+      href="images/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
   </head>
   <body>
-    <header>
-      <h1>Etiquetas video, audio, favicon, iframe, meta</h1>
-    </header>
-    <main>
-      <article>
-        <h2>Etiquetas 'meta'</h2>
-        <pre><code>&lt;meta charset="UTF-8" /&gt;
-&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
-&lt;meta name="autor" content="Alberto Fernández Sánchez" /&gt;
-&lt;meta name="keywords" content="etiquetas, video, audio" /&gt;</code></pre>
-      </article>
-
-      <article>
-        <h2>Etiquetas 'video'</h2>
-        <p>
-          En HTML5, la etiqueta &lt;video&gt; se utiliza para insertar contenido
-          de video en una página web.
-        </p>
-        <video width="350px" height="200px" controls preload="metadata">
-          <source src="videos/etiqueta_videoII.mp4" type="video/mp4" />
-          <source src="videos/etiqueta_videoII.ogg" type="video/ogg" />
-          Tu navegador no soporta vídeos HTML5.
-        </video>
-      </article>
-      <article>
-        <h2>Etiquetas 'audio'</h2>
-        <p>
-          En HTML5, la etiqueta &lt;audio&gt; se utiliza para insertar contenido
-          de audio en una página web.
-        </p>
-        <audio controls preload="metadata">
-          <source src="audios/etiquetas_audio.mp3" type="audio/mpeg" />
-          <source src="audios/etiquetas_audio.ogg" type="audio/ogg" />
-          Tu navegador no soporta audio HTML5.
-        </audio>
-      </article>
-      <article>
-        <h2>Etiquetas 'favicon'</h2>
-        <p>
-          La etiqueta &lt;link&gt; con el atributo rel="icon" se utiliza para
-          especificar el favicon de una página web.
-        </p>
-        <pre><code>&lt;link rel="icon" href="images/css3.png" type="image/x-icon" /&gt;</code></pre>
-      </article>
-      <article>
-        <h2>Etiquetas 'iframe'</h2>
-        <p>
-          La etiqueta &lt;iframe&gt; se utiliza para incrustar otro documento
-          HTML dentro de la página actual.
-        </p>
-        <iframe
-          src="https://www.pildorasinformaticas.es/all-courses"
-          width="600"
-          height="400"
-          title="Warhammer40K"
-          frameborder="0"
-        ></iframe>
-        <br /><br />
-        <p>Video de youtube</p>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/6YVLLkWE_9w?si=R_14Fi0FrOm1SVVD"
-          title="YouTube video player"
-          frameborder="0"
-          allow="
-            accelerometer;
-            autoplay;
-            clipboard-write;
-            encrypted-media;
-            gyroscope;
-            picture-in-picture;
-            web-share;
-          "
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-      </article>
-    </main>
+    <h1>Etiqueta Video</h1>
+    <video poster="images/molinos-de-alcazar-de.jpg" controls width="400">
+      <source src="videos/Publicar20s.mp4" type="video/mp4" />
+      <source src="videos/Publicar20s.ogv" type="video/ogv" />
+      <source src="videos/Publicar20s.webm" type="video/webm" />
+    </video>
+    <h2>Etiqueta Audio</h2>
+    <audio src="audios/audio.mp3" controls>
+      <source src="audios/audio.mp3" />
+      ERROR, formato no soportado.
+    </audio>
+    <hr />
+    <h1>iFrames</h1>
+    <iframe width="500" src="https://www.marca.com" frameborder="0"></iframe>
+    <iframe width="500" src="https://www.elmundo.com" frameborder="0"></iframe>
+    <iframe width="500" src="https://www.elpais.com" frameborder="0"></iframe>
+    <hr />
+    <h1>Video del IES Juan Bosco</h1>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/qhXUHkhzqb0?si=7lH_yxK4cz1JHEpb"
+      title="YouTube video player"
+      frameborder="0"
+      allow="
+        accelerometer;
+        autoplay;
+        clipboard-write;
+        encrypted-media;
+        gyroscope;
+        picture-in-picture;
+        web-share;
+      "
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+    <hr />
+    <h1>Mapa de Google Maps</h1>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.76449349679!2d-3.2244833233984744!3d39.391500717398905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd69af036cec6af9%3A0x3cb32e283081ecee!2sIES%20Juan%20Bosco!5e1!3m2!1sen!2ses!4v1795629570171!5m2!1sen!2ses"
+      width="600"
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="strict-origin-when-cross-origin"
+    ></iframe>
+    <hr />
   </body>
 </html>
