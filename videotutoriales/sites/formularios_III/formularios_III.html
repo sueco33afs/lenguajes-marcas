@@ -3,130 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formularios III</title>
-      </head>
+    <title>Formularios II</title>
+  </head>
   <body>
-    <header id="inicio">
-      <h1 style="text-align: center">Formularios III</h1>
-
-    </header>
-    <main>
-      <section>
-        <h2>Atributos de Campos de un Formulario</h2>
+    <h1>Tipos de Inputs</h1>
+    <form action="procesa.php" method="get">
+      <fieldset>
+        <legend>Datos Personales</legend>
         <p>
-          En este videotutorial se ven algunos atributos adicionales que pueden
-          llevar los campos de los formularios.
+          <label for="nombre">Nombre:</label><br />
+          <input
+            type="text"
+            id="nombre"
+            name="Name"
+            maxlength="6"
+            placeholder="Escriba su nombre completo"
+            required
+            autofocus
+          />
         </p>
         <p>
-          El atributo <strong><em>'value'</em></strong> contiene el valor
-          inicial del campo nada más abrirse el formulario
+          <label for="pob">Población:</label><br />
+          <input
+            type="text"
+            id="pob"
+            name="pob"
+            maxlength="50"
+            value="Alcazar de San Juan"
+            disabled
+            readonly
+          />
         </p>
         <p>
-          El atributo <strong><em>'maxlength'</em></strong> número máximo de
-          caracteres que el usuario puede escribir en el campo (solo para campos
-          de texto).
+          <label for="passwd">Contraseña: </label>
+          <br /><input
+            type="password"
+            id="passwd"
+            name="contraseña"
+            maxlength="6"
+            minlength="4"
+          />
         </p>
         <p>
-          El atributo <strong><em>'checked'</em></strong> atributo booleano que
-          marca por defecto un checkbox o radio button como seleccionado.
+          <label for="hombre2">Hombre: </label
+          ><input type="radio" name="genero" id="hombre2" value="H" checked />
+          <label for="mujer2">Mujer: </label
+          ><input type="radio" name="genero" id="mujer2" value="M" />
         </p>
         <p>
-          El atributo <strong><em>'placeholder'</em></strong> texto de ayuda que
-          se muestra en gris dentro del campo vacío, y desaparece al escribir;
-          no se envía como valor.
+          <label for="fumador">Fumador: </label
+          ><input type="checkbox" name="fumador" id="fumador" checked />
         </p>
-        <p>
-          El atributo <strong><em>'readonly'</em></strong> el usuario no puede
-          modificar el valor del campo, pero sí puede seleccionarlo/copiarlo, y
-          <strong>sí se envía</strong> en el formulario al hacer submit.
-        </p>
-        <p>
-          El atributo <strong><em>'disabled'</em></strong> el campo queda
-          completamente inactivo (no se puede ni seleccionar ni editar), suele
-          mostrarse "deshabilitado" visualmente, y
-          <strong>no se envía</strong> su valor con el formulario.
-        </p>
-
-        <p>Ejemplo:</p>
-        <form action="procedamos.php" method="get">
-          <fieldset>
-            <legend>Datos Personales</legend>
-            <p>
-              <label for="nombre2">Nombre:</label><br />
-              <input
-                type="text"
-                id="nombre2"
-                maxlength="15"
-                placeholder="Escribe tu nombre"
-                required
-              />
-            </p>
-            <p>
-              <label for="apellidos2">Apellidos: </label>
-              <br /><input
-                type="text"
-                id="apellidos2"
-                maxlength="15"
-                name="Apellidos"
-                placeholder="Escribe tus apellidos"
-                required
-              />
-            </p>
-            <p>
-              <label for="telefono2">Teléfono: <small>readonly</small></label
-              ><br /><input
-                type="number"
-                id="telefono2"
-                name="Teléfono"
-                maxlength="9"
-                readonly
-              />
-            </p>
-            <p>
-              <label for="hombre2">Hombre: </label
-              ><input
-                type="radio"
-                name="genero"
-                id="hombre2"
-                value="H"
-                checked
-              />
-              <label for="mujer2">Mujer: </label
-              ><input type="radio" name="genero" id="mujer2" value="M" />
-            </p>
-            <p>
-              <label for="nacionalidad">provincia: </label
-              ><select name="provincia" id="provincia" disabled>
-                <option value="Toledo"></option>
-                <option value="to">Toledo</option>
-                <option value="cr">Ciudad Real</option>
-                <option value="cu">Cuenca</option>
-                <option value="gu">Guadalajara</option>
-                <option value="alb">Albacete</option>
-              </select>
-            </p>
-            <p>
-              <label for="obsv">Observaciones: </label>
-              <textarea name="obsv" id="obsv" cols="50" rows="5">
-Escriba aquí ... </textarea
-              >
-            </p>
-            <p>
-              Lea detenidamente las condiciones del contrato
-              <a href="https://www.iesjuanbosco.es/">aquí</a>
-            </p>
-            <p><input type="checkbox" checked /> Acepto condiciones</p>
-          </fieldset>
-
-          <br /><br />
-          <!-- Botones de envío y reset -->
-          <input type="submit" name="Enviar" id="enviar2" />
-          <input type="reset" name="reset" id="reset" />
-        </form>
-      </section>
-    </main>
-    <br /><br />
-    <a href="#inicio">inicio página</a>
-
+      </fieldset>
+      <br /><br />
+      <!-- Botones de envío y reset -->
+      <input type="submit" name="Enviar" id="enviar2" />
+      <input type="reset" name="reset" id="reset" />
+    </form>
   </body>
 </html>

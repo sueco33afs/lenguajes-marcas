@@ -4,247 +4,81 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formularios II</title>
-     </head>
+  </head>
   <body>
-    <header id="inicio">
-      <h1 style="text-align: center">Formularios II</h1>
-      <img
-        src="images/formulario.png"
-        alt="logo form"
-        width="25%"
-        height="25%"
-        class="image"
-      />
-    </header>
-    <main>
-      <section>
-        <h2>Tipos de 'input' más utilizados</h2>
+    <h1>Tipos de Inputs</h1>
+    <form action="procesa.php" method="get">
+      <fieldset>
+        <legend>Datos Personales</legend>
         <p>
-          En este videotutorial se echa un vistazo a los tipos de campos
-          <strong><em>'input'</em></strong> más utilizados a la hora de hacer
-          formularios.
+          <label for="nombre">Nombre:</label><br />
+          <input type="text" id="nombre" name="Name" maxlength="6" />
         </p>
         <p>
-          Debemos saber que los inputs de los formularios son elementos de
-          linea. Esto quiere decir que por defecto aparecen unos a continuación
-          de otros. Si quiero que aparezcan unos debajo de otro, dedo meterlos,
-          por ejemplo, dentro de un párrafo <em>'p'</em> que es un elemento de
-          bloque.
+          <label for="passwd">Contraseña: </label>
+          <br /><input
+            type="password"
+            id="passwd"
+            name="contraseña"
+            maxlength="6"
+          />
         </p>
-        <p>Los <em>'input'</em> no tienen cierre.</p>
         <p>
-          Aquí aparece el atributo <strong><em>'maxlength</em></strong> que
-          limita el número de caracteres que puedo introducir.
+          <label for="hombre2">Hombre: </label
+          ><input type="radio" name="genero" id="hombre2" value="H" checked />
+          <label for="mujer2">Mujer: </label
+          ><input type="radio" name="genero" id="mujer2" value="M" />
         </p>
-        <p>Debemos ponerle un nombre al campo para determinar su valor.</p>
         <p>
-          Se pone un <em>'id'</em> para vincularlo con la etiqueta
-          <em>'label'</em>
+          <label for="fumador">Fumador: </label
+          ><input type="checkbox" name="fumador" id="fumador" />
         </p>
-        <p>Ejemplo:</p>
-        <form action="procedamos.php">
-          <fieldset>
-            <legend>Datos Personales</legend>
-            <p>
-              <label for="name">Nombre: </label><br />
-              <input type="text" maxlength="15" id="name" name="Nombre" />
-            </p>
-            <p>
-              <label for="passwd">Password: </label><br />
-              <input
-                type="password"
-                maxlength="15"
-                id="passwd"
-                name="Password"
-              />
-            </p>
-          </fieldset>
-        </form>
-      </section>
+      </fieldset>
+      <p>
+        <label for="nacionalidad">provincia: </label
+        ><select name="provincia" id="provincia">
+          <option value=""></option>
+          <option value="to">Toledo</option>
+          <option value="cr">Ciudad Real</option>
+          <option value="cu">Cuenca</option>
+          <option value="gu">Guadalajara</option>
+          <option value="alb">Albacete</option>
+        </select>
+      </p>
+      <p><label for="obsv">Observaciones: </label></p>
+      <textarea name="obsv" id="obsv" cols="10" rows="6">
+Escriba algo ... </textarea
+      >
+      <p>
+        <label for="color">Color: </label><br /><input
+          type="color"
+          name="color"
+          id="color"
+        />
+      </p>
+      <p>
+        <label for="date">Fecha de Nacimiento: </label
+        ><input type="date" name="date" id="date" />
+      </p>
+      <p>
+        <label for="edad">Edad: </label
+        ><input type="number" name="edad" id="edad" min="0" max="100" />
+      </p>
+      <p>
+        <label for="email">Email: </label
+        ><input type="email" name="email" id="email" />
+      </p>
+      <p>
+        <label for="file">Adjuntar foto: </label><br /><input
+          type="file"
+          name="file"
+          id="file"
+        />
+      </p>
       <br /><br />
-      <section>
-        <h2>Botónes de 'Radio'</h2>
-        <p>
-          Para que los botones de radio sean excluyentes y unos excluyan los
-          otros, es muy <strong>Importante</strong>:
-        </p>
-        <ol type="a">
-          <li>Ponerles un <strong>name</strong>.</li>
-          <li>
-            Ese name debe ser <strong>EL MISMO</strong> en todos los botones de
-            radio que indiquen el mismo campo, por ejemplo <em>'género'</em>.
-          </li>
-        </ol>
-        <p>Ejemplo:</p>
-        <form action="procedamos.php">
-          <fieldset>
-            <legend>Datos Personales</legend>
-            <p>
-              <label for="nombre">Nombre:</label><br />
-              <input type="text" id="nombre" name="Name" />
-            </p>
-            <p>
-              <label
-                >Apellidos: <br /><input
-                  type="text"
-                  id="apellidos"
-                  name="Apellidos"
-              /></label>
-            </p>
-            <p>
-              <label for="telefono">Teléfono:</label><br /><input
-                type="number"
-                id="telefono"
-                name="Teléfono"
-              />
-            </p>
-            <p>
-              <label for="hombre">Hombre: </label
-              ><input
-                type="radio"
-                name="genero"
-                id="hombre"
-                value="H"
-                checked
-              />
-              <label for="mujer">Mujer: </label
-              ><input type="radio" name="genero" id="mujer" value="M" />
-            </p>
-            <input type="submit" name="Enviar" id="enviar" />
-          </fieldset>
-        </form>
-      </section>
-      <br /><br />
-      <section>
-        <h2>Casilla de chequeo 'checkbox'</h2>
-        <p>
-          Si queremos que la casilla de chequeo aparezca marcada de inicio, en
-          el <em>input</em> debemos poner <strong><em>checked</em></strong>
-        </p>
-        <p><em>Los 'input': </em></p>
-        <ul style="list-style-type: circle">
-          <li>
-            El input tipo <strong>submit</strong> tiene aspecto de botón, no
-            necesita que pongamos <em>name</em> y en el
-            <strong>'value'</strong> ponemos que queremos que aparezca en el
-            botón.
-          </li>
-          <li>
-            El input tipo <strong>reset</strong> que también es un botón, sirve
-            para dejar el formulario con los valores iniciales.
-          </li>
-        </ul>
-        <p><strong>select</strong>, para listas desplegables</p>
-
-        <p>Ejemplo:</p>
-        <form action="procedamos.php" method="get">
-          <fieldset>
-            <legend>Datos Personales</legend>
-            <p>
-              <label for="nombre2">Nombre:</label><br />
-              <input type="text" id="nombre2" name="Name" />
-            </p>
-            <p>
-              <label for="apellidos2">Apellidos: </label>
-              <br /><input type="text" id="apellidos2" name="Apellidos" />
-            </p>
-            <p>
-              <label for="telefono2">Teléfono:</label><br /><input
-                type="number"
-                id="telefono2"
-                name="Teléfono"
-              />
-            </p>
-            <p>
-              <label for="hombre2">Hombre: </label
-              ><input
-                type="radio"
-                name="genero"
-                id="hombre2"
-                value="H"
-                checked
-              />
-              <label for="mujer2">Mujer: </label
-              ><input type="radio" name="genero" id="mujer2" value="M" />
-            </p>
-            <p>
-              <label for="nacionalidad">provincia: </label
-              ><select name="provincia" id="provincia">
-                <option value=""></option>
-                <option value="to">Toledo</option>
-                <option value="cr">Ciudad Real</option>
-                <option value="cu">Cuenca</option>
-                <option value="gu">Guadalajara</option>
-                <option value="alb">Albacete</option>
-              </select>
-            </p>
-            <p>
-              <label for="fumador">Fumador: </label
-              ><input type="checkbox" name="fumador" id="fumador" />
-            </p>
-            <p><label for="obsv">Observaciones: </label></p>
-            <textarea name="obsv" id="obsv" cols="50" rows="5">
-Escriba aquí ... </textarea
-            >
-          </fieldset>
-          <br />
-          <fieldset>
-            <legend>Perfíl</legend>
-            <p>
-              <label for="date">Birth: </label><br /><input
-                type="date"
-                name="date"
-                id="date"
-              />
-            </p>
-            <p>
-              <label for="edad">Edad: </label><br /><input
-                type="number"
-                name="edad"
-                id="edad"
-                min="1"
-                max="105"
-              />
-            </p>
-            <p>
-              <label for="email">Email: </label><br /><input
-                type="email"
-                name="email"
-                id="email"
-              />
-            </p>
-            <p>
-              <label for="usuario">Id Ususario: </label><br /><input
-                type="text"
-                maxlength="15"
-                name="Usuario"
-                id="usuario"
-              />
-            </p>
-            <p>
-              <label for="color">Color: </label><br /><input
-                type="color"
-                name="color"
-                id="color"
-              />
-            </p>
-            <p>
-              <label for="file">Subir archivos: </label><br /><input
-                type="file"
-                name="file"
-                id="file"
-              />
-            </p>
-          </fieldset>
-          <br /><br />
-          <!-- Botones de envío y reset -->
-          <input type="submit" name="Enviar" id="enviar2" />
-          <input type="reset" name="reset" id="reset" />
-        </form>
-      </section>
-    </main>
-    <br /><br />
-    <a href="#inicio">inicio página</a>
-
+      <!-- Botones de envío y reset -->
+      <input type="submit" name="Enviar" id="enviar2" />
+      <input type="reset" name="reset" id="reset" />
+    </form>
   </body>
 </html>
