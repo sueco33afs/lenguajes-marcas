@@ -4,90 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Estilos</title>
-    
   </head>
   <body>
-    <main>
-      <header>
-        <h1>Introducción a los estilos</h1>
-        <h2>Atributo style</h2>
-        <p>
-          El atributo style sirve para aplicar el formato a través del lenguaje
-          CSS.
-        </p>
-      </header>
-
-      <section>
-        <article>
-          <ul style="list-style-type: circle">
-            <li>
-              <strong><em>'style'</em></strong> Incrusta CSS dentro del
-              documento HTML. Va en el <strong>'head'</strong> y permite definir
-              estilos para elementos HTML.
-            </li>
-            <li>
-              <strong><em>'br' (line break)</em></strong> Inserta un salto de
-              línea dentro de un texto. Es un elemento
-              <strong>vacío (void element)</strong>: no tiene etiqueta de
-              cierre.
-              <p
-                style="
-                  background-color: rgb(73, 173, 255);
-                  padding: 9px;
-                  border: 3px solid darkblue;
-                  border-radius: 9px;
-                  color: black;
-                "
-              >
-                En un lugar de la mancha <br />
-                de cuyo nombre no quiero acordarme. <br />
-                No ha mucho tiempo que vivía un hidalgo de los de lanza en
-                <br />
-                estocada.
-              </p>
-            </li>
-            <li>
-              <strong><em>'pre' (preformatted text)</em></strong> Enfocada a
-              contener código de programación, muestra el texto tal cual está
-              escrito: conserva espacios, tabuladores y saltos de línea, y usa
-              fuente monoespaciada por defecto. Normalmente HTML colapsa los
-              espacios en blanco; <strong><em>'pre'</em></strong> lo evita.
-              <p>Ejemplo de JavaScript:</p>
-              <pre>
-                  <strong><em>for (const i; i < 10; i++) {
-                  alert ("Dime un número: " + i);
-                }</em></strong>
-              </pre>
-            </li>
-            <li>
-              <strong><em>Comentarios</em></strong> En HTML se escriben entre
-              <strong>&lt;!--</strong> y <strong>--&gt;</strong>. El navegador
-              los ignora por completo y no se muestran en la página.
-              <pre>
-                  <strong><em>&lt;!-- Esto es un comentario --&gt;</em></strong>
-              </pre>
-              <br />
-              <ul>
-                <li>
-                  Empiezan con <strong>&lt;!--</strong> y terminan
-                  <strong>--&gt;</strong>.
-                </li>
-                <li>
-                  El navegador los ignora totalmente, no se muestran en la
-                  página.
-                </li>
-                <li>Pueden ocupar varias líneas:</li>
-              </ul>
-            </li>
-          </ul>
-          <pre><strong><em>
-                      &lt;!--Este es un comentario
-                          de varias líneas
-                          --&gt
-                          </em></strong></pre>
-        </article>
-      </section>
-
-    </main>
+    <h1>Enlaces/Hiperenlaces/Links</h1>
+    <a href="https://iesjuanbosco.es" target="_blank">IES Juan Bosco</a>
+    <a href="https://iesjuanbosco.es" target="_self">IES Juan Bosco</a>
+    <a href="pagina1.html" target="_self">Página del sitio</a>
+    <a href="archivos/archivo1.html">Enlace a página en subcarpeta</a>
+    <p>
+      <a href="https://alcazardesanjuan.es"
+        ><img
+          src="images/molinos-de-alcazar-de.jpg"
+          width="300"
+          alt="molinos de alcazar"
+      /></a>
+    </p>
+    <hr />
+    <h1>Ejemplo de enlace a un archivo</h1>
+    <a href="archivos/CFGS_Desarrollo_Aplicaciones_Multiplataforma.pdf"
+      >Descárgate el currículum de DAM
+    </a>
   </body>
 </html>

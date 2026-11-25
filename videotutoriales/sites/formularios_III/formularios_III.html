@@ -3,62 +3,114 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formularios II</title>
+    <title>Formularios III</title>
   </head>
   <body>
-    <h1>Tipos de Inputs</h1>
+    <h1>Tipos de inputs</h1>
     <form action="procesa.php" method="get">
       <fieldset>
         <legend>Datos Personales</legend>
         <p>
-          <label for="nombre">Nombre:</label><br />
+          <label for="nom">Nombre: </label><br />
           <input
             type="text"
-            id="nombre"
-            name="Name"
             maxlength="6"
+            id="nom"
+            name="nombre"
             placeholder="Escriba su nombre completo"
-            required
             autofocus
+            required
           />
         </p>
         <p>
-          <label for="pob">Población:</label><br />
+          <label for="pob">Población: </label>
           <input
             type="text"
-            id="pob"
-            name="pob"
+            value="Alcázar de San Juan"
             maxlength="50"
-            value="Alcazar de San Juan"
-            disabled
+            name="población"
+            id="pob"
             readonly
+            disabled
           />
         </p>
         <p>
-          <label for="passwd">Contraseña: </label>
-          <br /><input
+          <label for="passwd">Contraseña: </label><br />
+          <input
             type="password"
-            id="passwd"
-            name="contraseña"
             maxlength="6"
             minlength="4"
+            id="passwd"
+            name="contraseña"
           />
         </p>
         <p>
-          <label for="hombre2">Hombre: </label
-          ><input type="radio" name="genero" id="hombre2" value="H" checked />
-          <label for="mujer2">Mujer: </label
-          ><input type="radio" name="genero" id="mujer2" value="M" />
+          <label for="hombre">Hombre: </label
+          ><input type="radio" name="genero" id="hombre" value="H" checked />
+          <label for="mujer">Mujer: </label
+          ><input type="radio" name="genero" id="mujer" value="M" />
         </p>
         <p>
           <label for="fumador">Fumador: </label
           ><input type="checkbox" name="fumador" id="fumador" checked />
         </p>
       </fieldset>
-      <br /><br />
+      <p>
+        <label for="provincia">Provincia: </label
+        ><select name="provincia" id="provincia">
+          <option value=""></option>
+          <option value="to">Toledo</option>
+          <option value="cr">Ciudad Real</option>
+          <option value="cu">Cuenca</option>
+          <option value="gu">Guadalajara</option>
+          <option value="alb">Albacete</option>
+        </select>
+      </p>
+      <p><label for="obsv">Observaciones: </label></p>
+      <textarea name="obsv" id="obsv" cols="50" rows="5">
+Escriba aquí ... </textarea
+      >
+      <p>
+        <label for="color">Color: </label><br /><input
+          type="color"
+          name="color"
+          id="color"
+        />
+      </p>
+      <p>
+        <label for="date">Fecha de Nacimiento: </label><br /><input
+          type="date"
+          name="date"
+          id="date"
+        />
+      </p>
+      <p>
+        <label for="edad">Edad: </label><br /><input
+          type="number"
+          name="edad"
+          id="edad"
+          min="0"
+          max="100"
+        />
+      </p>
+
+      <p>
+        <label for="email">Email: </label><br /><input
+          type="email"
+          name="email"
+          id="email"
+        />
+      </p>
+      <p>
+        <label for="foto">Adjuntar foto: </label><br /><input
+          type="file"
+          name="foto"
+          id="foto"
+        />
+      </p>
       <!-- Botones de envío y reset -->
-      <input type="submit" name="Enviar" id="enviar2" />
-      <input type="reset" name="reset" id="reset" />
+      <input type="submit" value="Enviar" />
+      <input type="reset" value="Reiniciar formulario" />
     </form>
   </body>
 </html>

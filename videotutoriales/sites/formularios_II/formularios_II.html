@@ -6,28 +6,23 @@
     <title>Formularios II</title>
   </head>
   <body>
-    <h1>Tipos de Inputs</h1>
+    <h1>Tipos de inputs</h1>
     <form action="procesa.php" method="get">
       <fieldset>
         <legend>Datos Personales</legend>
         <p>
-          <label for="nombre">Nombre:</label><br />
-          <input type="text" id="nombre" name="Name" maxlength="6" />
+          <label for="nom">Nombre: </label><br />
+          <input type="text" maxlength="6" id="nom" name="nombre" />
         </p>
         <p>
-          <label for="passwd">Contraseña: </label>
-          <br /><input
-            type="password"
-            id="passwd"
-            name="contraseña"
-            maxlength="6"
-          />
+          <label for="passwd">Contraseña: </label><br />
+          <input type="password" maxlength="6" id="passwd" name="contraseña" />
         </p>
         <p>
-          <label for="hombre2">Hombre: </label
-          ><input type="radio" name="genero" id="hombre2" value="H" checked />
-          <label for="mujer2">Mujer: </label
-          ><input type="radio" name="genero" id="mujer2" value="M" />
+          <label for="hombre">Hombre: </label
+          ><input type="radio" name="genero" id="hombre" value="H" checked />
+          <label for="mujer">Mujer: </label
+          ><input type="radio" name="genero" id="mujer" value="M" />
         </p>
         <p>
           <label for="fumador">Fumador: </label
@@ -35,7 +30,7 @@
         </p>
       </fieldset>
       <p>
-        <label for="nacionalidad">provincia: </label
+        <label for="provincia">Provincia: </label
         ><select name="provincia" id="provincia">
           <option value=""></option>
           <option value="to">Toledo</option>
@@ -46,8 +41,8 @@
         </select>
       </p>
       <p><label for="obsv">Observaciones: </label></p>
-      <textarea name="obsv" id="obsv" cols="10" rows="6">
-Escriba algo ... </textarea
+      <textarea name="obsv" id="obsv" cols="50" rows="5">
+Escriba aquí ... </textarea
       >
       <p>
         <label for="color">Color: </label><br /><input
@@ -57,28 +52,39 @@ Escriba algo ... </textarea
         />
       </p>
       <p>
-        <label for="date">Fecha de Nacimiento: </label
-        ><input type="date" name="date" id="date" />
-      </p>
-      <p>
-        <label for="edad">Edad: </label
-        ><input type="number" name="edad" id="edad" min="0" max="100" />
-      </p>
-      <p>
-        <label for="email">Email: </label
-        ><input type="email" name="email" id="email" />
-      </p>
-      <p>
-        <label for="file">Adjuntar foto: </label><br /><input
-          type="file"
-          name="file"
-          id="file"
+        <label for="date">Fecha de Nacimiento: </label><br /><input
+          type="date"
+          name="date"
+          id="date"
         />
       </p>
-      <br /><br />
+      <p>
+        <label for="edad">Edad: </label><br /><input
+          type="number"
+          name="edad"
+          id="edad"
+          min="0"
+          max="100"
+        />
+      </p>
+
+      <p>
+        <label for="email">Email: </label><br /><input
+          type="email"
+          name="email"
+          id="email"
+        />
+      </p>
+      <p>
+        <label for="foto">Adjuntar foto: </label><br /><input
+          type="file"
+          name="foto"
+          id="foto"
+        />
+      </p>
       <!-- Botones de envío y reset -->
-      <input type="submit" name="Enviar" id="enviar2" />
-      <input type="reset" name="reset" id="reset" />
+      <input type="submit" value="Enviar" />
+      <input type="reset" value="Reiniciar formulario" />
     </form>
   </body>
 </html>
