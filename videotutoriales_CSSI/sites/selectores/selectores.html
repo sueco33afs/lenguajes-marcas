@@ -5,23 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sintaxis y Selectores</title>
     <style>
-      body {
-        background-image: url(images/background_CSS.png);
+      h1 {
+        font-size: 3em;
+        text-align: center;
+        color: orange;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h3 {
         color: blue;
+        font-style: italic;
+      }
+      #anuncio {
+        border: 2px solid red;
+        border-radius: 5px;
+        text-align: center;
+        background-color: azure;
+        font-weight: bold;
+      }
+      .leemas {
+        background-color: blue;
+        color: white;
+      }
+      h2,
+      p {
+        font-family: monospace;
+      }
+      p a {
+        background-color: yellow;
+      }
+      .importante {
+        background-color: orange;
+        color: red;
       }
     </style>
   </head>
   <body>
     <main>
       <head>
-        <h1>Sintaxis y Selectores</h1>
+        <h1>El Periódico de Alcázar</h1>
+        <h2>La actualidad de tu pueblo</h2>
+        <p id="anuncio">Subscríbete ahora y ahorra un 20%</p>
       </head>
       <section>
-        <p>
-          Vamos a ver los selectores básicos CSS. Los selectores seleccionan a
-          qué voy a aplicarle las relgas CSS. La sintaxis es:
-        </p>
-        <pre><code>selector  {propiedad:valor; porpiedad;valor; ... }</code></pre>
+        <article>
+          <h3>Actualidad</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum culpa
+            repellat aspernatur, iste optio deserunt, odio repudiandae
+            reprehenderit maiores animi rem corporis natus quisquam modi beatae
+            laborum. Facere, deleniti sit.
+            <a href="noticia.html">Ir a la noticia</a>
+          </p>
+          <p class="leemas">leer más ...</p>
+        </article>
+        <article>
+          <h3>Politica</h3>
+          <a href="noticia.html">Ir a la noticia</a>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum culpa
+            repellat aspernatur, iste optio deserunt, odio repudiandae
+            reprehenderit maiores animi rem corporis natus quisquam modi beatae
+            laborum. Facere, deleniti sit.
+          </p>
+          <p class="leemas importante">leer más ...</p>
+        </article>
+        <article>
+          <h3>Deportes</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum culpa
+            repellat aspernatur, iste optio deserunt, odio repudiandae
+            reprehenderit maiores animi rem corporis natus quisquam modi beatae
+            laborum. Facere, deleniti sit.
+          </p>
+          <p class="leemas">leer más ...</p>
+        </article>
       </section>
     </main>
   </body>
