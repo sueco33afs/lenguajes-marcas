@@ -3,7 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Propiedades de texto</title>
+    <style>
+      h1 {
+        font-size: 3em;
+        color: orange;
+        text-shadow: 3px 2px 5px black;
+        text-align: center;
+        text-transform: lowercase;
+      }
+      p {
+        text-align: justify;
+        letter-spacing: 1px;
+        line-height: 3;
+      }
+      #caja {
+        width: 100vw;
+        height: 100vh;
+        background-color: aqua;
+      }
+      #titulo {
+        background-color: yellow;
+        width: 50%;
+      }
+      a {
+        text-decoration: none;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <a href="https://www.iesjuanbosco.es" target="_blank">IES Juan Bosco</a>
+    <div id="caja">
+      <div id="titulo">Esto es una subcaja</div>
+      <h1>Propiedades de Texto</h1>
+      <p>
+        A diferencia de HTML, en CSS se puede idnicar el tamaño de los elementos
+        con distintas unidades. Por ejemplo; cetímetros, pulgadas, pixeles ...
+      </p>
+    </div>
+  </body>
 </html>
